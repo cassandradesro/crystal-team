@@ -12,8 +12,13 @@
 	<body>
 		
 		<div id="app">
+			
+			<nav>
+				<router-link to="/amethyst">Amethyst</router-link>
+				<router-link to="/citrine">Citrine</router-link>
+			</nav>
 
-			<router-view :message="message" :color="color"></router-view>
+			<router-view></router-view>
 		  
 		</div>
 
@@ -21,12 +26,7 @@
 		<script src="https://unpkg.com/vue/dist/vue.js"></script>
 		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 		<script src="dist/js/HomeComponent.js"></script>
-		<script src="dist/js/Crystal1Component.js"></script>
-		<script src="dist/js/Crystal2Component.js"></script>
-		<script src="dist/js/Crystal3Component.js"></script>
-		<script src="dist/js/Crystal4Component.js"></script>
-		<script src="dist/js/Crystal5Component.js"></script>
-		<script src="dist/js/Crystal6Component.js"></script>
+		<script src="dist/js/CrystalComponent.js"></script>
 		<script src="dist/js/app.js"></script>
 
 	</body>
