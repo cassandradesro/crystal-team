@@ -24,8 +24,8 @@ var HomeComponent = Vue.component("home", {
 			<div class="kaleidoscope-images">
 				<img src="" class="active rose kaleidoscope">
 				<img src="" class="amethyst kaleidoscope">
-				<img src="" class="** kaleidoscope">
-				<img src="" class="** kaleidoscope">
+				<img src="" class="greenfluorite kaleidoscope">
+				<img src="" class="hematite kaleidoscope">
 				<img src="" class="citrine kaleidoscope">
 				<img src="" class="red kaleidoscope">
 			</div>
@@ -33,8 +33,8 @@ var HomeComponent = Vue.component("home", {
 			<div class="circles">
 				<div class="active rose circle"></div>
 				<div class="amethyst circle"></div>
-				<div class="** circle"></div>
-				<div class="** circle"></div>
+				<div class="greenfluorite circle"></div>
+				<div class="hematite circle"></div>
 				<div class="citrine circle"></div>
 				<div class="red circle"></div>
 			</div>
@@ -44,8 +44,8 @@ var HomeComponent = Vue.component("home", {
 				<h1>Red Jasper</h1>
 				<h1>Citrine</h1>
 				<h1>Amethyst</h1>
-				<h1>**</h1>
-				<h1>**</h1>
+				<h1>Green Fluorite</h1>
+				<h1>Hematite</h1>
 			</div>
 
 			<a href=""><img src="" class="checkout"></a>
