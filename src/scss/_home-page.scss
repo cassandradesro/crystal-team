@@ -3,6 +3,10 @@
     font-family: 'Rakkas', cursive;
 }
 
+nav{
+    display: none;
+}
+
 .crystal-titles{
     font-size: 3.6em;
     margin: 130px auto;
@@ -77,7 +81,6 @@ h3.healing-crystals{
 
     .dot {
         $dotSize: 3%;
-
         position: absolute;
         top: 50% - $dotSize/2;
         left: 50% - $dotSize/2;
@@ -86,6 +89,10 @@ h3.healing-crystals{
         height: $dotSize;
         width: $dotSize;
         border-radius: 30px;
+
+        a{
+            color: transparent; 
+        }
 
         &.dot1{ transform: rotate(7.5deg*0) translateY(-1800%) scale(2); border: 2px solid #593a54; background-color: transparent; &:hover{
             background-color: #593a54; cursor: pointer;

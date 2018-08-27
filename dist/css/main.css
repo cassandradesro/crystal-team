@@ -74,6 +74,10 @@ table {
 	font-family: 'Rakkas', cursive;
 }
 
+nav {
+	display: none;
+}
+
 .crystal-titles {
 	font-size: 3.6em;
 	margin: 130px auto;
@@ -166,6 +170,10 @@ h3.healing-crystals {
 	height: 3%;
 	width: 3%;
 	border-radius: 30px;
+}
+
+.kaleidoscope-images .dot a {
+	color: transparent;
 }
 
 .kaleidoscope-images .dot.dot1 {
