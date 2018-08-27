@@ -1,9 +1,29 @@
-'use strict';
+"use strict";
 
-console.log('Hello World from app.js! Crystal Teams Project co-developed by Erin Kahn, \n\tCassandra Desrosiers, and Kat Sudakova. Designed by Gwynn Prewitt');
+console.log("Hello World from app.js! Crystal Teams Project co-developed by Erin Kahn, \n\tCassandra Desrosiers, and Kat Sudakova. Designed by Gwynn Prewitt");
+
+var crystals = {
+	amethyst: {
+		title: "Amethyst",
+		subtitle: 'the "intuitive eye"',
+		chakraName: "Sahasrara",
+		chakraNickname: "Crown Chakra",
+		description: "Lorem ipsum dolor sit amet, con enim, exercitationem quibusdam similique porro est voluptatem impedit deserunt natus numquam, asperiores voluptates consequuntur!",
+		verticalText: "oxide mineral"
+	},
+	citrine: {
+		title: "citrine"
+	},
+	jasper: {
+		title: "Red Jasper"
+	},
+	rosequartz: {
+		title: "Rose Quartz"
+	}
+};
 
 var router = new VueRouter({
-	routes: [{ path: '', component: HomeComponent }, { path: '/crystal1', component: Crystal1Component }]
+	routes: [{ path: '', component: HomeComponent }, { path: '/amethyst', component: CrystalComponent, props: { crystal: crystals.amethyst } }, { path: '/citrine', component: CrystalComponent, props: { crystal: crystals.citrine } }, { path: '/jasper', component: CrystalComponent, props: { crystal: crystals.jasper } }, { path: '/rosequartz', component: CrystalComponent, props: { crystal: crystals.rosequartz } }]
 });
 
 var app = new Vue({
@@ -11,12 +31,13 @@ var app = new Vue({
 	router: router,
 	data: {
 		message: "Hey Y'all!",
-		color: "red"
+		color: "red",
 		// home page loops: 
 		// loop through nav items
 		// loop through kaleidoskope imgs
 		//loop through crystal titles
 		// loop through text color
+		cart: []
 	}
 });
 //# sourceMappingURL=app.js.map
