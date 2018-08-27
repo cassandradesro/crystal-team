@@ -16,8 +16,32 @@ TABLE OF CONTENTS:
 */
 
 /* 0. Reset ================================= */
+
+//citrine
+$background-orange: #d77008;
+$text-orange: #fbc75c;
+//
+
+//amethyst
+$background-purple: #caaad1;
+$text-purple: #4b365a;
+//
+
+//jasper
+$background-red: #f97a74
+$red-text: #901b00; 
+//
+
+//rose quartz
+$background-pink: #f4bcdc;
+$pink-text: #d74b62;
+//
+
 @import 'reset';
 @import 'home-page';
+
+
+
 
 
 /* 1. Main Layout ================================= */
@@ -28,4 +52,8 @@ TABLE OF CONTENTS:
 
 body {
 	background: #fff;
+}
+
+p{
+
 }
