@@ -170,6 +170,13 @@ h3.healing-crystals {
 
 .kaleidoscope-images .dot.dot1 {
 	transform: rotate(0deg) translateY(-1800%) scale(2);
+	border: 2px solid #593a54;
+	background-color: transparent;
+}
+
+.kaleidoscope-images .dot.dot1:hover {
+	background-color: #593a54;
+	cursor: pointer;
 }
 
 .kaleidoscope-images .dot.dot2 {
@@ -202,6 +209,13 @@ h3.healing-crystals {
 
 .kaleidoscope-images .dot.dot9 {
 	transform: rotate(60deg) translateY(-1800%) scale(2);
+	border: 2px solid #caaad1;
+	background-color: transparent;
+}
+
+.kaleidoscope-images .dot.dot9:hover {
+	background-color: #caaad1;
+	cursor: pointer;
 }
 
 .kaleidoscope-images .dot.dot10 {
@@ -234,6 +248,13 @@ h3.healing-crystals {
 
 .kaleidoscope-images .dot.dot17 {
 	transform: rotate(120deg) translateY(-1800%) scale(2);
+	border: 2px solid #444444;
+	background-color: transparent;
+}
+
+.kaleidoscope-images .dot.dot17:hover {
+	background-color: #444444;
+	cursor: pointer;
 }
 
 .kaleidoscope-images .dot.dot18 {
@@ -266,6 +287,13 @@ h3.healing-crystals {
 
 .kaleidoscope-images .dot.dot25 {
 	transform: rotate(180deg) translateY(-1800%) scale(2);
+	border: 2px solid green;
+	background-color: transparent;
+}
+
+.kaleidoscope-images .dot.dot25:hover {
+	background-color: green;
+	cursor: pointer;
 }
 
 .kaleidoscope-images .dot.dot26 {
@@ -298,6 +326,13 @@ h3.healing-crystals {
 
 .kaleidoscope-images .dot.dot33 {
 	transform: rotate(240deg) translateY(-1800%) scale(2);
+	border: 2px solid #d77008;
+	background-color: transparent;
+}
+
+.kaleidoscope-images .dot.dot33:hover {
+	background-color: #d77008;
+	cursor: pointer;
 }
 
 .kaleidoscope-images .dot.dot34 {
@@ -330,6 +365,13 @@ h3.healing-crystals {
 
 .kaleidoscope-images .dot.dot41 {
 	transform: rotate(300deg) translateY(-1800%) scale(2);
+	border: 2px solid #f97a74;
+	background-color: transparent;
+}
+
+.kaleidoscope-images .dot.dot41:hover {
+	background-color: #f97a74;
+	cursor: pointer;
 }
 
 .kaleidoscope-images .dot.dot42 {
