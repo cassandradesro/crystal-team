@@ -11,6 +11,9 @@
     color: #d74b62;
     display: flex;
     justify-content: center;
+    @media screen and (min-width: 1024px){
+        font-size: 4em;
+    }
 }
 
 h3.healing-crystals{
@@ -41,7 +44,6 @@ h3.healing-crystals{
         max-width: 543px;
     }
     @media screen and (min-width: 1024px){
-       
         width: 34.62664714%;
         margin-left: 9.80966325%;
         max-width: 443px;
@@ -79,10 +81,9 @@ h3.healing-crystals{
         display: flex;
         justify-content: center;
         margin: 0 auto;
-        width: 52%;
+        width: 70%;
+        max-width: 400px;
         align-content: center;
-        
-
         img{
             width: 100%;
             height: 100%;
@@ -93,8 +94,8 @@ h3.healing-crystals{
         left: 71%;
         transform: translateX(-50%);
         position: absolute;
-        width: 33%;
-        max-width: 500px;
+        width: 42%;
+        top:-90px;
 
         img{
             width: 100%;

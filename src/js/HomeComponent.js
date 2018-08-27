@@ -10,8 +10,6 @@ var HomeComponent = Vue.component("home", {
 				
 			<div class="max-container">
 
-				
-
 				<div class="kaleidoscope-images">
 					<img src="dist/img/home/rose-kaleidoscope.png" class="rose kaleidoscope">
 				</div>
@@ -34,6 +32,7 @@ var HomeComponent = Vue.component("home", {
 
 		</div>
 	`,
-	props: ["message"]
+	props: ["message"],
+
 
 })

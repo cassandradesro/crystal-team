@@ -12,7 +12,11 @@ var app = new Vue({
 	data: {
 		message: "Hey Y'all!",
 		color: "red"
-
+		// home page loops: 
+		// loop through nav items
+		// loop through kaleidoskope imgs
+		//loop through crystal titles
+		// loop through text color
 	}
 });
 //# sourceMappingURL=app.js.map
