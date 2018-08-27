@@ -154,10 +154,210 @@ h3.healing-crystals {
 }
 
 .kaleidoscope-images {
-	border: 5px dotted #593a54;
-	border-radius: 82%;
 	padding: 18px;
 	position: relative;
+}
+
+.kaleidoscope-images .dot {
+	position: absolute;
+	top: 48.5%;
+	left: 48.5%;
+	background-color: #593a54;
+	height: 3%;
+	width: 3%;
+	border-radius: 30px;
+}
+
+.kaleidoscope-images .dot.dot1 {
+	transform: rotate(0deg) translateY(-1800%) scale(2);
+}
+
+.kaleidoscope-images .dot.dot2 {
+	transform: rotate(7.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot3 {
+	transform: rotate(15deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot4 {
+	transform: rotate(22.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot5 {
+	transform: rotate(30deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot6 {
+	transform: rotate(37.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot7 {
+	transform: rotate(45deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot8 {
+	transform: rotate(52.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot9 {
+	transform: rotate(60deg) translateY(-1800%) scale(2);
+}
+
+.kaleidoscope-images .dot.dot10 {
+	transform: rotate(67.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot11 {
+	transform: rotate(75deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot12 {
+	transform: rotate(82.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot13 {
+	transform: rotate(90deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot14 {
+	transform: rotate(97.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot15 {
+	transform: rotate(105deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot16 {
+	transform: rotate(112.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot17 {
+	transform: rotate(120deg) translateY(-1800%) scale(2);
+}
+
+.kaleidoscope-images .dot.dot18 {
+	transform: rotate(127.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot19 {
+	transform: rotate(135deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot20 {
+	transform: rotate(142.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot21 {
+	transform: rotate(150deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot22 {
+	transform: rotate(157.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot23 {
+	transform: rotate(165deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot24 {
+	transform: rotate(172.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot25 {
+	transform: rotate(180deg) translateY(-1800%) scale(2);
+}
+
+.kaleidoscope-images .dot.dot26 {
+	transform: rotate(187.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot27 {
+	transform: rotate(195deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot28 {
+	transform: rotate(202.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot29 {
+	transform: rotate(210deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot30 {
+	transform: rotate(217.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot31 {
+	transform: rotate(225deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot32 {
+	transform: rotate(232.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot33 {
+	transform: rotate(240deg) translateY(-1800%) scale(2);
+}
+
+.kaleidoscope-images .dot.dot34 {
+	transform: rotate(247.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot35 {
+	transform: rotate(255deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot36 {
+	transform: rotate(262.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot37 {
+	transform: rotate(270deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot38 {
+	transform: rotate(277.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot39 {
+	transform: rotate(285deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot40 {
+	transform: rotate(292.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot41 {
+	transform: rotate(300deg) translateY(-1800%) scale(2);
+}
+
+.kaleidoscope-images .dot.dot42 {
+	transform: rotate(307.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot43 {
+	transform: rotate(315deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot44 {
+	transform: rotate(322.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot45 {
+	transform: rotate(330deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot46 {
+	transform: rotate(337.5deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot47 {
+	transform: rotate(345deg) translateY(-1800%);
+}
+
+.kaleidoscope-images .dot.dot48 {
+	transform: rotate(352.5deg) translateY(-1800%);
 }
 
 @media screen and (max-width: 1023px) {
@@ -182,7 +382,7 @@ h3.healing-crystals {
 		transform: translateX(-50%);
 		position: absolute;
 		width: 42%;
-		top: -90px;
+		top: -60px;
 	}
 	.kaleidoscope-images img {
 		width: 100%;

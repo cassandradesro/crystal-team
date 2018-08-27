@@ -12,6 +12,7 @@ var HomeComponent = Vue.component("home", {
 
 				<div class="kaleidoscope-images">
 					<img src="dist/img/home/rose-kaleidoscope.png" class="rose kaleidoscope">
+					<div v-for="i in 48" v-bind:class="'dot dot'+i"></div>
 				</div>
 
 				<div class="home-text">

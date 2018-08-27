@@ -72,10 +72,70 @@ h3.healing-crystals{
 
 
 .kaleidoscope-images{
-    border: 5px dotted #593a54;
-    border-radius: 82%;
     padding: 18px;
     position: relative;
+
+    .dot {
+        $dotSize: 3%;
+
+        position: absolute;
+        top: 50% - $dotSize/2;
+        left: 50% - $dotSize/2;
+       
+        background-color: #593a54;
+        height: $dotSize;
+        width: $dotSize;
+        border-radius: 30px;
+
+        &.dot1{ transform: rotate(7.5deg*0) translateY(-1800%) scale(2); }
+        &.dot2{ transform: rotate(7.5deg*1) translateY(-1800%); }
+        &.dot3{ transform: rotate(7.5deg*2) translateY(-1800%); }
+        &.dot4{ transform: rotate(7.5deg*3) translateY(-1800%); }
+        &.dot5{ transform: rotate(7.5deg*4) translateY(-1800%); }
+        &.dot6{ transform: rotate(7.5deg*5) translateY(-1800%); }
+        &.dot7{ transform: rotate(7.5deg*6) translateY(-1800%); }
+        &.dot8{ transform: rotate(7.5deg*7) translateY(-1800%); }
+        &.dot9{ transform: rotate(7.5deg*8) translateY(-1800%) scale(2); }
+        &.dot10{ transform: rotate(7.5deg*9) translateY(-1800%); }
+        &.dot11{ transform: rotate(7.5deg*10) translateY(-1800%); }
+        &.dot12{ transform: rotate(7.5deg*11) translateY(-1800%); }
+        &.dot13{ transform: rotate(7.5deg*12) translateY(-1800%); }
+        &.dot14{ transform: rotate(7.5deg*13) translateY(-1800%); }
+        &.dot15{ transform: rotate(7.5deg*14) translateY(-1800%); }
+        &.dot16{ transform: rotate(7.5deg*15) translateY(-1800%); }
+        &.dot17{ transform: rotate(7.5deg*16) translateY(-1800%) scale(2); }
+        &.dot18{ transform: rotate(7.5deg*17) translateY(-1800%); }
+        &.dot19{ transform: rotate(7.5deg*18) translateY(-1800%); }
+        &.dot20{ transform: rotate(7.5deg*19) translateY(-1800%); }
+        &.dot21{ transform: rotate(7.5deg*20) translateY(-1800%); }
+        &.dot22{ transform: rotate(7.5deg*21) translateY(-1800%); }
+        &.dot23{ transform: rotate(7.5deg*22) translateY(-1800%); }
+        &.dot24{ transform: rotate(7.5deg*23) translateY(-1800%); }
+        &.dot25{ transform: rotate(7.5deg*24) translateY(-1800%) scale(2); }
+        &.dot26{ transform: rotate(7.5deg*25) translateY(-1800%); }
+        &.dot27{ transform: rotate(7.5deg*26) translateY(-1800%); }
+        &.dot28{ transform: rotate(7.5deg*27) translateY(-1800%); }
+        &.dot29{ transform: rotate(7.5deg*28) translateY(-1800%); }
+        &.dot30{ transform: rotate(7.5deg*29) translateY(-1800%); }
+        &.dot31{ transform: rotate(7.5deg*30) translateY(-1800%); }
+        &.dot32{ transform: rotate(7.5deg*31) translateY(-1800%); }
+        &.dot33{ transform: rotate(7.5deg*32) translateY(-1800%) scale(2); }
+        &.dot34{ transform: rotate(7.5deg*33) translateY(-1800%); }
+        &.dot35{ transform: rotate(7.5deg*34) translateY(-1800%); }
+        &.dot36{ transform: rotate(7.5deg*35) translateY(-1800%); }
+        &.dot37{ transform: rotate(7.5deg*36) translateY(-1800%); }
+        &.dot38{ transform: rotate(7.5deg*37) translateY(-1800%); }
+        &.dot39{ transform: rotate(7.5deg*38) translateY(-1800%); }
+        &.dot40{ transform: rotate(7.5deg*39) translateY(-1800%); }
+        &.dot41{ transform: rotate(7.5deg*40) translateY(-1800%) scale(2); }
+        &.dot42{ transform: rotate(7.5deg*41) translateY(-1800%); }
+        &.dot43{ transform: rotate(7.5deg*42) translateY(-1800%); }
+        &.dot44{ transform: rotate(7.5deg*43) translateY(-1800%); }
+        &.dot45{ transform: rotate(7.5deg*44) translateY(-1800%); }
+        &.dot46{ transform: rotate(7.5deg*45) translateY(-1800%); }
+        &.dot47{ transform: rotate(7.5deg*46) translateY(-1800%); }
+        &.dot48{ transform: rotate(7.5deg*47) translateY(-1800%); }
+    }
 
     @media screen and (max-width: 1023px){
         display: flex;
@@ -95,7 +155,7 @@ h3.healing-crystals{
         transform: translateX(-50%);
         position: absolute;
         width: 42%;
-        top:-90px;
+        top:-60px;
 
         img{
             width: 100%;

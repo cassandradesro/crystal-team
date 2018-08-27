@@ -3,6 +3,9 @@ console.log(`Hello World from app.js! Crystal Teams Project co-developed by Erin
 
 
 let crystals = {
+	rosequartz: {
+		title: "Rose Quartz"
+	},
 	amethyst: {
 		title: "Amethyst",
 		subtitle: 'the "intuitive eye"',
@@ -16,9 +19,6 @@ let crystals = {
 	},
 	jasper: {
 		title: "Red Jasper"
-	},
-	rosequartz: {
-		title: "Rose Quartz"
 	},
 }
 
