@@ -12,7 +12,14 @@ var HomeComponent = Vue.component("home", {
 
 				<div class="kaleidoscope-images">
 					<img src="dist/img/home/rose-kaleidoscope.png" class="rose kaleidoscope">
-					<div v-for="i in 48" v-bind:class="'dot dot'+i"></div>
+					<div v-for="i in 48" v-bind:class="'dot dot'+i">
+						<router-link to="/amethyst" v-if="i == 1">Amethyst</router-link>
+						<router-link to="/citrine" v-if="i == 9">citrine</router-link>
+						<router-link to="/jasper" v-if="i == 17">jasper</router-link>
+						<router-link to="/rosequartz" v-if="i == 25">rose</router-link>
+						<router-link to="/amethyst" v-if="i == 33">crystal 5</router-link>
+						<router-link to="/amethyst" v-if="i == 41">crystal 6</router-link>
+					</div>
 				</div>
 
 				<div class="home-text">

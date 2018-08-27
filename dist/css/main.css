@@ -180,31 +180,31 @@ h3.healing-crystals {
 }
 
 .kaleidoscope-images .dot.dot2 {
-	transform: rotate(7.5deg) translateY(-1800%);
+	transform: rotate(7.5deg) translateY(-1800%) scale(0.75);
 }
 
 .kaleidoscope-images .dot.dot3 {
-	transform: rotate(15deg) translateY(-1800%);
+	transform: rotate(15deg) translateY(-1800%) scale(0.75);
 }
 
 .kaleidoscope-images .dot.dot4 {
-	transform: rotate(22.5deg) translateY(-1800%);
+	transform: rotate(22.5deg) translateY(-1800%) scale(0.75);
 }
 
 .kaleidoscope-images .dot.dot5 {
-	transform: rotate(30deg) translateY(-1800%);
+	transform: rotate(30deg) translateY(-1800%) scale(0.75);
 }
 
 .kaleidoscope-images .dot.dot6 {
-	transform: rotate(37.5deg) translateY(-1800%);
+	transform: rotate(37.5deg) translateY(-1800%) scale(0.75);
 }
 
 .kaleidoscope-images .dot.dot7 {
-	transform: rotate(45deg) translateY(-1800%);
+	transform: rotate(45deg) translateY(-1800%) scale(0.75);
 }
 
 .kaleidoscope-images .dot.dot8 {
-	transform: rotate(52.5deg) translateY(-1800%);
+	transform: rotate(52.5deg) translateY(-1800%) scale(0.75);
 }
 
 .kaleidoscope-images .dot.dot9 {

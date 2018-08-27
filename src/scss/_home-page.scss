@@ -90,13 +90,13 @@ h3.healing-crystals{
         &.dot1{ transform: rotate(7.5deg*0) translateY(-1800%) scale(2); border: 2px solid #593a54; background-color: transparent; &:hover{
             background-color: #593a54; cursor: pointer;
         }}
-        &.dot2{ transform: rotate(7.5deg*1) translateY(-1800%); }
-        &.dot3{ transform: rotate(7.5deg*2) translateY(-1800%); }
-        &.dot4{ transform: rotate(7.5deg*3) translateY(-1800%); }
-        &.dot5{ transform: rotate(7.5deg*4) translateY(-1800%); }
-        &.dot6{ transform: rotate(7.5deg*5) translateY(-1800%); }
-        &.dot7{ transform: rotate(7.5deg*6) translateY(-1800%); }
-        &.dot8{ transform: rotate(7.5deg*7) translateY(-1800%); }
+        &.dot2{ transform: rotate(7.5deg*1) translateY(-1800%) scale(0.75); }
+        &.dot3{ transform: rotate(7.5deg*2) translateY(-1800%) scale(0.75); }
+        &.dot4{ transform: rotate(7.5deg*3) translateY(-1800%) scale(0.75); }
+        &.dot5{ transform: rotate(7.5deg*4) translateY(-1800%) scale(0.75); }
+        &.dot6{ transform: rotate(7.5deg*5) translateY(-1800%) scale(0.75); }
+        &.dot7{ transform: rotate(7.5deg*6) translateY(-1800%) scale(0.75); }
+        &.dot8{ transform: rotate(7.5deg*7) translateY(-1800%) scale(0.75); }
         &.dot9{ transform: rotate(7.5deg*8) translateY(-1800%) scale(2); border: 2px solid #caaad1; background-color: transparent; &:hover{
             background-color: #caaad1; cursor: pointer;
         }}
