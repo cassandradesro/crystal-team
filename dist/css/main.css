@@ -69,13 +69,204 @@ table {
 	border-spacing: 0;
 }
 
+.page {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: Helvetica;
+	background-color: #caaad1;
+	padding: 10%;
+	color: #fff;
+	font-family: "bernhard-gothic-urw", sans-serif;
+}
+
+@media screen and (max-width: 1023px) {
+	.page {
+		flex-direction: column;
+	}
+}
+
+.bag-icon, .vertical-text, .add-button {
+	position: absolute;
+}
+
+.bag-icon {
+	top: 5%;
+	right: 5%;
+}
+
+.vertical-text {
+	transform: rotate(270deg);
+	top: 50%;
+	left: 5%;
+}
+
+@media screen and (max-width: 1023px) {
+	.vertical-text {
+		top: 70%;
+		left: 40%;
+	}
+}
+
+.add-button {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	bottom: 5%;
+	background-color: #caaad1;
+	color: #fff;
+	box-shadow: 1px 0px 24px 12px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.column-1, .column-2, .column-3 {
+	width: 33.3%;
+}
+
+@media screen and (max-width: 1023px) {
+	.column-1, .column-2, .column-3 {
+		width: 100%;
+	}
+}
+
+.column-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 18px;
+}
+
+.column-1 h1 {
+	color: #4b365a;
+	font-size: 3rem;
+	font-family: "Rakkas", cursive;
+	margin-bottom: 20px;
+}
+
+.column-1 h2 {
+	margin-bottom: 30px;
+}
+
+.column-1 div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.column-1 div img {
+	width: 30px;
+	height: 30px;
+}
+
+.column-1 div h4 {
+	color: #4b365a;
+}
+
+.column-1 p {
+	font-size: 1rem;
+	margin-left: 40px;
+}
+
+@media screen and (max-width: 1023px) {
+	.column-1 p {
+		margin-left: unset;
+		text-align: center;
+	}
+}
+
+.column-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.column-2 .number {
+	display: none;
+	position: relative;
+	top: 50%;
+	left: 50%;
+}
+
+.column-2 .number.active {
+	display: block;
+}
+
+.column-2 .crystal {
+	display: none;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.column-2 .crystal.active {
+	display: block;
+}
+
+.column-2 .dots {
+	display: flex;
+	flex-direction: row;
+}
+
+.column-2 .dots .dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin-right: 10px;
+}
+
+.column-2 .dots .dot.active {
+	border: 2px solid #4b365a;
+}
+
+.column-3 {
+	display: flex;
+	flex-direction: row;
+}
+
+.column-3 .bullets {
+	display: flex;
+	flex-direction: column;
+}
+
+.column-3 .bullets .bullet {
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin: 10px 0;
+}
+
+.column-3 .facts {
+	border-left: 2px solid #fff;
+	padding: 0 30px;
+	margin: -10px;
+}
+
+.column-3 .facts .fact {
+	font-size: 20px;
+	margin-top: 20px;
+	white-space: nowrap;
+}
+
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background: #ccc;
+	width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

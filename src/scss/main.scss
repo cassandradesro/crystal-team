@@ -28,7 +28,7 @@ $text-purple: #4b365a;
 //
 
 //jasper
-$background-red: #f97a74
+$background-red: #f97a74;
 $red-text: #901b00; 
 //
 
@@ -36,10 +36,13 @@ $red-text: #901b00;
 $background-pink: #f4bcdc;
 $pink-text: #d74b62;
 //
+$tablet-and-below: 1023px;
+$header-font:'Rakkas', cursive;
+$text-font: "bernhard-gothic-urw",sans-serif;
+
 
 @import 'reset';
 @import 'crystal-page';
-
 
 
 
