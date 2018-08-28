@@ -2,7 +2,7 @@ var HomeComponent = Vue.component("home", {
 	template: `
 		<div class="home">
 
-			<a href="javascript:;"><img src="dist/img/bag.png" class="checkout"></a>
+			<a href="javascript:;"><img src="dist/img/home/bagPurple.png" class="checkout"></a>
 			
 			<div class="crystal-titles" >
 				<h1 :style=" 'color: '+crystals[chosenCrystal].homeh1Color ">{{ crystals[chosenCrystal].title }}</h1>

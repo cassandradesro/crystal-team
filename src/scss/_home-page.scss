@@ -9,7 +9,8 @@ nav{
 
 .crystal-titles{
     font-size: 3.6em;
-    margin: 130px auto;
+    margin: 120px auto;
+    margin-bottom: 80px;
     width: 77%;
     white-space: nowrap;
     color: #d74b62;
@@ -17,6 +18,7 @@ nav{
     justify-content: center;
     @media screen and (min-width: 1024px){
         font-size: 4em;
+        margin-bottom: 120px;
     }
 }
 
