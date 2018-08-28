@@ -54,7 +54,7 @@ let crystals = {
 		homeh1Color: '#4b365a',
 		homeTextColor: '#4b365a',
 		homeKaleidoscope: '',
-		backgroundColor: '#caaad1';
+		backgroundColor: '#caaad1',
 		number1Image: 'dist/img/numbers/number-1.png',
 		number2Image: 'dist/img/numbers/number-2.png',
 		number3Image: 'dist/img/numbers/number-3.png',
@@ -82,7 +82,7 @@ let crystals = {
 		homeh1Color: '#fbc75c',
 		homeTextColor: '#fbc75c',
 		homeKaleidoscope: '',
-		backgroundColor: '#d77008';
+		backgroundColor: '#d77008',
 		number1Image: 'dist/img/numbers/number-1.png',
 		number2Image: 'dist/img/numbers/number-2.png',
 		number3Image: 'dist/img/numbers/number-3.png',
@@ -159,7 +159,7 @@ var app = new Vue({
 	el: '#app',
 	router: router,
 	data: {
-		message: 'Hey Y'all!',
+		message: 'Hey Yall!',
 		color: 'red',
 		cart: []
 	}

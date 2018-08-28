@@ -17,12 +17,12 @@ var CrystalComponent = Vue.component("crystal-page", {
 					<div class="chakra-area">
 						<h3>{{crystal.chakraName}}</h3>
 						<img class="chakra-shape" v-bind:src="crystal.chakraImage" alt="chakra shape">
-						<h4>{{crystal.chakraNickname}}</h4>
+						<h4 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.chakraNickname}}</h4>
 					</div>
 					<div class="chakra-area" v-if="crystal.chakra2Name">
 						<h3>{{crystal.chakra2Name}}</h3>
 						<img class="chakra-shape" v-bind:src="crystal.chakra2Image" alt="chakra shape">
-						<h4>{{crystal.chakra2Nickname}}</h4>
+						<h4 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.chakra2Nickname}}</h4>
 					</div>
 				</div>
 				<p>{{crystal.description}}</p>
@@ -42,10 +42,10 @@ var CrystalComponent = Vue.component("crystal-page", {
 					<img class="crystal crystal-four" v-bind:src="crystal.crystal4Image" alt="crystal">
 				</div>
 				<div class="dots">
-					<div class="active dot dot-one"></div>
-					<div class="dot dot-two"></div>
-					<div class="dot dot-three"></div>
-					<div class="dot dot-four"></div>
+					<div v-bind:style="'border-color: ' + crystal.homeh1Color" class="active dot dot-one"></div>
+					<div v-bind:style="'border-color: ' + crystal.homeh1Color" class="dot dot-two"></div>
+					<div v-bind:style="'border-color: ' + crystal.homeh1Color" class="dot dot-three"></div>
+					<div v-bind:style="'border-color: ' + crystal.homeh1Color" class="dot dot-four"></div>
 				</div>
 			</div> <!--function module to updates numbers, crystals and dots simultaneously-->
 					
@@ -67,7 +67,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 				</div>
 			</div>
 
-			<div class="add-button">add</div> <!--position absolute-->
+			<div class="add-button" v-bind:style="'backgroundColor: ' + crystal.backgroundColor">add</div> <!--position absolute-->
 			
 		</section>
 	`
