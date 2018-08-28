@@ -7,7 +7,7 @@ let crystals = {
 		title: "Rose Quartz",
 		homeh1Color: '#d74b62',
 		homeTextColor: '#d74b62',
-		homeKaleidoscope: ''
+		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png'
 	},
 	amethyst: {
 		title: "Amethyst",
@@ -18,32 +18,32 @@ let crystals = {
 		verticalText: "oxide mineral",
 		homeh1Color: '#4b365a',
 		homeTextColor: '#4b365a',
-		homeKaleidoscope: ''
+		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png'
 	},
 	citrine: {
 		title: "Citrine",
 		homeh1Color: '#fbc75c',
 		homeTextColor: '#fbc75c',
-		homeKaleidoscope: ''
+		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png'
 	},
 	jasper: {
 		title: "Red Jasper",
 		homeh1Color: '#901b00',
 		homeTextColor: '#901b00',
-		homeKaleidoscope: '',
+		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
 		
 	},
 	greenfluorite: {
 		title: "Green Fluorite",
 		homeh1Color: 'green',
 		homeTextColor: 'green',
-		homeKaleidoscope: ''
+		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png'
 	},
 	hematite: {
 		title: "Hematite",
 		homeh1Color: 'rgb(68, 68, 68)',
 		homeTextColor: 'rgb(68, 68, 68)',
-		homeKaleidoscope: ''
+		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png'
 	}
 }
 

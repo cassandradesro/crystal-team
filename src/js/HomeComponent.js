@@ -12,8 +12,8 @@ var HomeComponent = Vue.component("home", {
 				
 			<div class="max-container">
 
-				<div class="kaleidoscope-images">
-					<img src="dist/img/home/rose-kaleidoscope.png" class="rose kaleidoscope">
+				<div ref="kaleidoscopeholder" class="kaleidoscope-images">
+					<!--<img src="dist/img/home/rose-kaleidoscope.png">-->
 					<div v-for="i in 48" v-bind:class="'dot dot'+i">
 						
 						<div @mouseover="chosenCrystal = 'amethyst'">
@@ -57,7 +57,16 @@ var HomeComponent = Vue.component("home", {
 	props: ["crystals"],
 	data: function() {
 		return {
-			chosenCrystal: "rosequartz"
+			chosenCrystal: "rosequartz",
+			kaleidoscope: null
 		}
+	},
+	watch: {
+		chosenCrystal: function() {
+			this.kaleidoscope.image.src = this.crystals[this.chosenCrystal].homeKaleidoscope;
+		}
+	},
+	mounted: function() {
+		this.kaleidoscope = makeKaleidoscope( this.$refs.kaleidoscopeholder );
 	}
 })

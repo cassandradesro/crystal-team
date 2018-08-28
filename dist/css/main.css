@@ -80,7 +80,8 @@ nav {
 
 .crystal-titles {
 	font-size: 3.6em;
-	margin: 130px auto;
+	margin: 120px auto;
+	margin-bottom: 80px;
 	width: 77%;
 	white-space: nowrap;
 	color: #d74b62;
@@ -91,6 +92,7 @@ nav {
 @media screen and (min-width: 1024px) {
 	.crystal-titles {
 		font-size: 4em;
+		margin-bottom: 120px;
 	}
 }
 
@@ -132,6 +134,13 @@ h3.healing-crystals {
 		width: 34.62664714%;
 		margin-left: 9.80966325%;
 		max-width: 443px;
+		font-size: 1.3em;
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.home-text {
+		font-size: 1.4em;
 	}
 }
 
@@ -153,7 +162,7 @@ h3.healing-crystals {
 	.max-container {
 		width: 90%;
 		margin: 0 auto;
-		max-width: 1206px;
+		max-width: 1288px;
 	}
 }
 
@@ -419,7 +428,7 @@ h3.healing-crystals {
 		max-width: 400px;
 		align-content: center;
 	}
-	.kaleidoscope-images img {
+	.kaleidoscope-images canvas, .kaleidoscope-images img {
 		width: 100%;
 		height: 100%;
 		max-width: 470px;
@@ -434,10 +443,10 @@ h3.healing-crystals {
 		width: 42%;
 		top: -60px;
 	}
-	.kaleidoscope-images img {
+	.kaleidoscope-images canvas, .kaleidoscope-images img {
 		width: 100%;
 		height: 100%;
-		max-width: 470px;
+		max-width: 505px;
 	}
 }
 
