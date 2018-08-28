@@ -1,0 +1,191 @@
+.home{
+    background-color: #fff;
+    font-family: 'Rakkas', cursive;
+}
+
+nav{
+    display: none;
+}
+
+.crystal-titles{
+    font-size: 3.6em;
+    margin: 130px auto;
+    width: 77%;
+    white-space: nowrap;
+    color: #d74b62;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: 1024px){
+        font-size: 4em;
+    }
+}
+
+h3.healing-crystals{
+    @media screen and (max-width: 1023px){
+        top: 397px;
+        left: -44px;
+        font-size: 1.2em;
+    }
+    color: #9795ff;
+    position: absolute;
+    top: 100px;
+    left: -35px;
+    font-size: 1.5em;
+    transform: rotate(-90deg);
+   
+}
+
+
+.home-text{
+    color: #593a54;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    @media screen and (max-width: 1023px){
+        display: flex;
+        flex-direction: column;
+        width: 82%;
+        margin: 80px auto;
+        max-width: 543px;
+    }
+    @media screen and (min-width: 1024px){
+        width: 34.62664714%;
+        margin-left: 9.80966325%;
+        max-width: 443px;
+    }
+
+    p:first-child{
+        padding-bottom: 40px;
+    }
+}
+
+.checkout{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.max-container{
+    position: relative;
+
+    @media screen and (min-width: 1024px){
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1206px;
+    }
+}
+
+
+.kaleidoscope-images{
+    padding: 18px;
+    position: relative;
+
+    .dot {
+        $dotSize: 3%;
+        position: absolute;
+        top: 50% - $dotSize/2;
+        left: 50% - $dotSize/2;
+       
+        background-color: #593a54;
+        height: $dotSize;
+        width: $dotSize;
+        border-radius: 30px;
+
+        a{
+            color: transparent; 
+        }
+
+        &.dot1{ transform: rotate(7.5deg*0) translateY(-1800%) scale(2); border: 2px solid #4b365a; background-color: transparent; &:hover{
+            background-color: #4b365a; cursor: pointer;
+        }}
+        &.dot2{ transform: rotate(7.5deg*1) translateY(-1800%) scale(0.7); }
+        &.dot3{ transform: rotate(7.5deg*2) translateY(-1800%) scale(0.7); }
+        &.dot4{ transform: rotate(7.5deg*3) translateY(-1800%) scale(0.7); }
+        &.dot5{ transform: rotate(7.5deg*4) translateY(-1800%) scale(0.7); }
+        &.dot6{ transform: rotate(7.5deg*5) translateY(-1800%) scale(0.7); }
+        &.dot7{ transform: rotate(7.5deg*6) translateY(-1800%) scale(0.7); }
+        &.dot8{ transform: rotate(7.5deg*7) translateY(-1800%) scale(0.7); }
+        &.dot9{ transform: rotate(7.5deg*8) translateY(-1800%) scale(2); border: 2px solid #fbc75c; background-color: transparent; &:hover{
+            background-color: #fbc75c; cursor: pointer;
+        }}
+        &.dot10{ transform: rotate(7.5deg*9) translateY(-1800%) scale(0.7) ; }
+        &.dot11{ transform: rotate(7.5deg*10) translateY(-1800%) scale(0.7); }
+        &.dot12{ transform: rotate(7.5deg*11) translateY(-1800%) scale(0.7); }
+        &.dot13{ transform: rotate(7.5deg*12) translateY(-1800%) scale(0.7); }
+        &.dot14{ transform: rotate(7.5deg*13) translateY(-1800%) scale(0.7); }
+        &.dot15{ transform: rotate(7.5deg*14) translateY(-1800%) scale(0.7); }
+        &.dot16{ transform: rotate(7.5deg*15) translateY(-1800%) scale(0.7); }
+        &.dot17{ transform: rotate(7.5deg*16) translateY(-1800%) scale(2); border: 2px solid #901b00; background-color: transparent; &:hover{
+            background-color: #901b00; cursor: pointer;
+        }}
+        &.dot18{ transform: rotate(7.5deg*17) translateY(-1800%) scale(0.7); }
+        &.dot19{ transform: rotate(7.5deg*18) translateY(-1800%) scale(0.7); }
+        &.dot20{ transform: rotate(7.5deg*19) translateY(-1800%) scale(0.7); }
+        &.dot21{ transform: rotate(7.5deg*20) translateY(-1800%) scale(0.7); }
+        &.dot22{ transform: rotate(7.5deg*21) translateY(-1800%) scale(0.7); }
+        &.dot23{ transform: rotate(7.5deg*22) translateY(-1800%) scale(0.7); }
+        &.dot24{ transform: rotate(7.5deg*23) translateY(-1800%) scale(0.7); }
+        &.dot25{ transform: rotate(7.5deg*24) translateY(-1800%) scale(2); border: 2px solid #d74b62; background-color: transparent; &:hover{
+            background-color: #d74b62; cursor: pointer;
+        }}
+        &.dot26{ transform: rotate(7.5deg*25) translateY(-1800%) scale(0.7); }
+        &.dot27{ transform: rotate(7.5deg*26) translateY(-1800%) scale(0.7); }
+        &.dot28{ transform: rotate(7.5deg*27) translateY(-1800%) scale(0.7); }
+        &.dot29{ transform: rotate(7.5deg*28) translateY(-1800%) scale(0.7); }
+        &.dot30{ transform: rotate(7.5deg*29) translateY(-1800%) scale(0.7); }
+        &.dot31{ transform: rotate(7.5deg*30) translateY(-1800%) scale(0.7); }
+        &.dot32{ transform: rotate(7.5deg*31) translateY(-1800%) scale(0.7); }
+        &.dot33{ transform: rotate(7.5deg*32) translateY(-1800%) scale(2); border: 2px solid green; background-color: transparent; &:hover{
+            background-color: green; cursor: pointer;
+        }}
+        &.dot34{ transform: rotate(7.5deg*33) translateY(-1800%) scale(0.7); }
+        &.dot35{ transform: rotate(7.5deg*34) translateY(-1800%) scale(0.7); }
+        &.dot36{ transform: rotate(7.5deg*35) translateY(-1800%) scale(0.7); }
+        &.dot37{ transform: rotate(7.5deg*36) translateY(-1800%) scale(0.7); }
+        &.dot38{ transform: rotate(7.5deg*37) translateY(-1800%) scale(0.7); }
+        &.dot39{ transform: rotate(7.5deg*38) translateY(-1800%) scale(0.7); }
+        &.dot40{ transform: rotate(7.5deg*39) translateY(-1800%) scale(0.7); }
+        &.dot41{ transform: rotate(7.5deg*40) translateY(-1800%) scale(2); border: 2px solid rgb(68, 68, 68); background-color: transparent; &:hover{
+            background-color: rgb(68, 68, 68); cursor: pointer;
+        }}
+        &.dot42{ transform: rotate(7.5deg*41) translateY(-1800%) scale(0.7); }
+        &.dot43{ transform: rotate(7.5deg*42) translateY(-1800%) scale(0.7); }
+        &.dot44{ transform: rotate(7.5deg*43) translateY(-1800%) scale(0.7); }
+        &.dot45{ transform: rotate(7.5deg*44) translateY(-1800%) scale(0.7); }
+        &.dot46{ transform: rotate(7.5deg*45) translateY(-1800%) scale(0.7); }
+        &.dot47{ transform: rotate(7.5deg*46) translateY(-1800%) scale(0.7); }
+        &.dot48{ transform: rotate(7.5deg*47) translateY(-1800%) scale(0.7); }
+    }
+
+    @media screen and (max-width: 1023px){
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 70%;
+        max-width: 400px;
+        align-content: center;
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 470px;
+        }
+    }
+    @media screen and (min-width: 1024px){
+        left: 71%;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 42%;
+        top:-60px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 470px;
+        }
+       
+    }
+
+}
+
+
+
+

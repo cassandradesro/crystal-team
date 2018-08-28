@@ -40,7 +40,17 @@ $tablet-and-below: 1023px;
 $header-font:'Rakkas', cursive;
 $text-font: "bernhard-gothic-urw",sans-serif;
 
+//green fluorite
+$background-green: green;
+$green-text: green;
+//
 
+//hematite
+$background-hematite: rgb(68, 68, 68);
+$hematite-text: rgb(68, 68, 68);
+//
+
+@import 'home-page';
 @import 'reset';
 @import 'crystal-page';
 
@@ -53,7 +63,7 @@ $text-font: "bernhard-gothic-urw",sans-serif;
 }
 
 body {
-	width: 100%;
+	background: #fff;
 }
 
 p{

@@ -2,59 +2,62 @@ var HomeComponent = Vue.component("home", {
 	template: `
 		<div class="home">
 
-			<h3 class="healing-crystals">Healing Crystals</h3> 
-
-			<div class="home-text">
-				<p>
-					Crystals are alive. They connect us to the earth, because they are
-					tangible, physical forms that have powerful vibrations.
-				</p>
-				<p>
-					This energy continues to connect with you when you wear them close
-					to the skin or place them in your environment. With every thought,
-					crystals pick up on your unique vibrational energy and amplify the
-					positive vibes that you're cultivating.
-				</p>
-			</div>
-
-			<div class="dotted-circle-border">
-				
-			</div>
-
-			<div class="kaleidoscope-images">
-				<img src="" class="active rose kaleidoscope">
-				<img src="" class="amethyst kaleidoscope">
-				<img src="" class="** kaleidoscope">
-				<img src="" class="** kaleidoscope">
-				<img src="" class="citrine kaleidoscope">
-				<img src="" class="red kaleidoscope">
-			</div>
-
-			<div class="circles">
-				<div class="active rose circle"></div>
-				<div class="amethyst circle"></div>
-				<div class="** circle"></div>
-				<div class="** circle"></div>
-				<div class="citrine circle"></div>
-				<div class="red circle"></div>
-			</div>
+			<a href="javascript:;"><img src="dist/img/bag.png" class="checkout"></a>
 			
-			<div class="crystal-titles">
-				<h1 class="active">Rose Quartz</h1>
-				<h1>Red Jasper</h1>
-				<h1>Citrine</h1>
-				<h1>Amethyst</h1>
-				<h1>**</h1>
-				<h1>**</h1>
+			<div class="crystal-titles" >
+				<h1 :style=" 'color: '+crystals[chosenCrystal].homeh1Color ">{{ crystals[chosenCrystal].title }}</h1>
 			</div>
 
-			<a href=""><img src="" class="checkout"></a>
+			<h3 class="healing-crystals">Healing Crystals</h3> 
+				
+			<div class="max-container">
 
+				<div class="kaleidoscope-images">
+					<img src="dist/img/home/rose-kaleidoscope.png" class="rose kaleidoscope">
+					<div v-for="i in 48" v-bind:class="'dot dot'+i">
+						
+						<div @mouseover="chosenCrystal = 'amethyst'">
+							<router-link to="/amethyst" v-if="i == 1">Amethyst</router-link>
+						</div>
+						<div @mouseover="chosenCrystal = 'citrine'">
+							<router-link to="/citrine" v-if="i == 9">citrine</router-link>
+						</div>
+						<div @mouseover="chosenCrystal = 'jasper'">
+							<router-link to="/jasper" v-if="i == 17">jasper</router-link>
+						</div>
+						<div @mouseover="chosenCrystal = 'rosequartz'">
+							<router-link to="/rosequartz" v-if="i == 25">rose</router-link>
+						</div>
+						<div @mouseover="chosenCrystal = 'greenfluorite'">
+							<router-link to="/greenfluorite" v-if="i == 33">crystal 5</router-link>
+						</div>
+						<div @mouseover="chosenCrystal = 'hematite'">
+							<router-link to="/hematite" v-if="i == 41">crystal 6</router-link>
+						</div>	
+					</div>
+				</div>
 
-			<router-link></router-link>
+				<div class="home-text">
+					<p :style=" 'color: '+crystals[chosenCrystal].homeTextColor "> 
+						Crystals are alive. They connect us to the earth, because they are
+						tangible, physical forms that have powerful vibrations.
+					</p>
+					<p :style=" 'color: '+crystals[chosenCrystal].homeTextColor ">
+						This energy continues to connect with you when you wear them close
+						to the skin or place them in your environment. With every thought,
+						crystals pick up on your unique vibrational energy and amplify the
+						positive vibes that you're cultivating.
+					</p>
+				</div>
+			</div>
+
 
 		</div>
 	`,
-	props: ["message"]
-
+	props: ["crystals"],
+	data: function() {
+		return {
+			chosenCrystal: "rosequartz"
+		}
+	}
 })
