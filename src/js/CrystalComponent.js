@@ -5,7 +5,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 		<section class="page">
 			<!--display flex on .page, with flex-direction: row-->
 
-			<img class="bag-icon" src="" alt="shopping bag icon"> <!--position absolute-->
+			<img class="bag-icon" src="dist/img/bag.png" alt="shopping bag icon"> <!--position absolute-->
 			<p class="vertical-text">oxide mineral</p> <!--position absolute-->
 
 			<div class="column-1">

@@ -12,7 +12,12 @@ let crystals = {
 		verticalText: "oxide mineral"
 	},
 	citrine: {
-		title: "citrine"
+		title: "citrine",
+		subtitle: 'the "intuitive eye"',
+		chakraName: "Sahasrara",
+		chakraNickname: "Crown Chakra", 
+		description: "Lorem ipsum dolor sit amet, con enim, exercitationem quibusdam similique porro est voluptatem impedit deserunt natus numquam, asperiores voluptates consequuntur!"
+		verticalText: "oxide mineral"
 	},
 	jasper: {
 		title: "Red Jasper"
