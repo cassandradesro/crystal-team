@@ -3,52 +3,143 @@ console.log(`Hello World from app.js! Crystal Teams Project co-developed by Erin
 
 
 let crystals = {
+
 	rosequartz: {
-		title: "Rose Quartz",
+		title: 'Rose Quartz',
+		subtitle: 'the "love stone"',
+		chakraName: 'Anahata',
+		chakraNickname: 'Heart Chakra',
+		chakraImage: 'dist/img/chakras/heart-chakra.png',
+		description: 'Lorem ipsum dolor sit amet, con enim, exercitationem quibusdam similique porro est voluptatem impedit deserunt natus numquam, asperiores voluptates consequuntur!',
+		verticalText: 'oxide mineral',
+		fact1: 'aids emotional healing',
+		fact2: 'opens heart to give and recieve love',
+		fact3: 'emits joy and warmth',
+		fact4: 'encourages forgiveness',
+		fact5: 'bestows peaceful sensations',
+		crystal1Image: 'dist/img/rose/rose-rock-1.png',
+		crystal2Image: 'dist/img/rose/rose-rock-2.png',
+		crystal3Image: 'dist/img/rose/rose-rock-3.png',
+		crystal4Image: 'dist/img/rose/rose-rock-4.png',
+		backgroundTexture: 'dist/img/rose/rose-texture.png',
 		homeh1Color: '#d74b62',
 		homeTextColor: '#d74b62',
-		homeKaleidoscope: ''
+		homeKaleidoscope: '',
+		backgroundColor: '#f4bcdc',
+		number1Image: 'dist/img/numbers/number-1.png',
+		number2Image: 'dist/img/numbers/number-2.png',
+		number3Image: 'dist/img/numbers/number-3.png',
+		number4Image: 'dist/img/numbers/number-4.png',
+
+
 	},
 	amethyst: {
-		title: "Amethyst",
+		title: 'Amethyst',
 		subtitle: 'the "intuitive eye"',
-		chakraName: "Sahasrara",
-		chakraNickname: "Crown Chakra", 
-		description: "Lorem ipsum dolor sit amet, con enim, exercitationem quibusdam similique porro est voluptatem impedit deserunt natus numquam, asperiores voluptates consequuntur!",
-		verticalText: "oxide mineral",
+		chakraName: 'Sahasrara',
+		chakraNickname: 'Crown Chakra',
+		chakraImage: 'dist/img/chakras/crown-chakra.png',
+		description: 'Lorem ipsum dolor sit amet, con enim, exercitationem quibusdam similique porro est voluptatem impedit deserunt natus numquam, asperiores voluptates consequuntur!',
+		verticalText: 'oxide mineral',
+		fact1: 'brings intense spiritual growth',
+		fact2: 'aids emotional healing',
+		fact3: 'supports overcoming addiction',
+		fact4: 'helps relieve stress and anxiety',
+		fact5: 'stabilizes mood swings',
+		crystal1Image: 'dist/img/amethyst/amethyst-rock-1.png',
+		crystal2Image: 'dist/img/amethyst/amethyst-rock-2.png',
+		crystal3Image: 'dist/img/amethyst/amethyst-rock-3.png',
+		crystal4Image: 'dist/img/amethyst/amethyst-rock-4.png',
+		backgroundTexture: 'dist/img/amethyst/amethyst-texture.png',
 		homeh1Color: '#4b365a',
 		homeTextColor: '#4b365a',
-		homeKaleidoscope: ''
+		homeKaleidoscope: '',
+		backgroundColor: '#caaad1';
+		number1Image: 'dist/img/numbers/number-1.png',
+		number2Image: 'dist/img/numbers/number-2.png',
+		number3Image: 'dist/img/numbers/number-3.png',
+		number4Image: 'dist/img/numbers/number-4.png',
+
 	},
 	citrine: {
-		subtitle: 'the "intuitive eye"',
-		chakraName: "Sahasrara",
-		chakraNickname: "Crown Chakra", 
-		description: "Lorem ipsum dolor sit amet, con enim, exercitationem quibusdam similique porro est voluptatem impedit deserunt natus numquam, asperiores voluptates consequuntur!"
-		verticalText: "oxide mineral"
-		title: "Citrine",
+		title: 'Citrine',
+		subtitle: 'the "lemon quartz"',
+		chakraName: 'Manipura',
+		chakraNickname: 'Solar Plexus Chakra', 
+		chakraImage: 'dist/img/chakras/solar-chakra.png',
+		description: 'Common colored varities include yellow, greenish-yellow, brownish yellow or orange.',
+		verticalText: 'silicone dioxide',
+		fact1: 'carries power of sun',
+		fact2: 'energizing, comforting and live giving',
+		fact3: 'helps clear the mind',
+		fact4: 'stirs the soul to seek action',
+		fact5: 'awakens creativity and imagination',
+		crystal1Image: 'dist/img/citrine/citrine-rock-1.png',
+		crystal2Image: 'dist/img/citrine/citrine-rock-2.png',
+		crystal3Image: 'dist/img/citrine/citrine-rock-3.png',
+		crystal4Image: 'dist/img/citrine/citrine-rock-4.png',
+		backgroundTexture: 'dist/img/citrine/citrine-texture.png',
 		homeh1Color: '#fbc75c',
 		homeTextColor: '#fbc75c',
-		homeKaleidoscope: ''
+		homeKaleidoscope: '',
+		backgroundColor: '#d77008';
+		number1Image: 'dist/img/numbers/number-1.png',
+		number2Image: 'dist/img/numbers/number-2.png',
+		number3Image: 'dist/img/numbers/number-3.png',
+		number4Image: 'dist/img/numbers/number-4.png',
 	},
 	jasper: {
-		title: "Red Jasper",
+		title: 'Red Jasper',
+		subtitle: 'the "blood of Mother Earth"',
+		chakraName: 'Muladhara',
+		chakraNickname: 'Root Chakra', 
+		chakraImage: 'dist/img/chakras/root-chakra.png',
+		chakra2Name: 'Svadhishtha',
+		chakra2Nickname: 'Sacral Chakra', 
+		chakra2Image: 'dist/img/chakras/sacral-chakra.png',
+		description: 'Common colored varities include red, yellow, brown, green, and rarely blue.',
+		verticalText: 'silicone dioxide',
+		fact1: 'alleviates stress',
+		fact2: 'helps reconnect with Earths grounding',
+		fact3: 'eleminates negativity',
+		fact4: 'ideal worry or rubbing stone',
+		fact5: 'helps clear mind during meditation',
+		crystal1Image: 'dist/img/jasper/jasper-rock-1.png',
+		crystal2Image: 'dist/img/jasper/jasper-rock-2.png',
+		crystal3Image: 'dist/img/jasper/jasper-rock-3.png',
+		crystal4Image: 'dist/img/jasper/jasper-rock-4.png',
+		crystalBackgroundTexture: 'dist/img/jasper/jasper-texture.png',
 		homeh1Color: '#901b00',
 		homeTextColor: '#901b00',
 		homeKaleidoscope: '',
+		backgroundColor: '#f97a74',
+		number1Image: 'dist/img/numbers/number-1.png',
+		number2Image: 'dist/img/numbers/number-2.png',
+		number3Image: 'dist/img/numbers/number-3.png',
+		number4Image: 'dist/img/numbers/number-4.png',
 		
 	},
 	greenfluorite: {
-		title: "Green Fluorite",
+		title: 'Green Fluorite',
 		homeh1Color: 'green',
 		homeTextColor: 'green',
-		homeKaleidoscope: ''
+		homeKaleidoscope: '', 
+		backgroundColor: 'green',
+		number1Image: 'dist/img/numbers/number-1.png',
+		number2Image: 'dist/img/numbers/number-2.png',
+		number3Image: 'dist/img/numbers/number-3.png',
+		number4Image: 'dist/img/numbers/number-4.png',
 	},
 	hematite: {
-		title: "Hematite",
+		title: 'Hematite',
 		homeh1Color: 'rgb(68, 68, 68)',
 		homeTextColor: 'rgb(68, 68, 68)',
-		homeKaleidoscope: ''
+		homeKaleidoscope: '', 
+		backgroundColor: 'rgb(68, 68, 68)',
+		number1Image: 'dist/img/numbers/number-1.png',
+		number2Image: 'dist/img/numbers/number-2.png',
+		number3Image: 'dist/img/numbers/number-3.png',
+		number4Image: 'dist/img/numbers/number-4.png',
 	}
 }
 
@@ -65,11 +156,11 @@ const router = new VueRouter({
 });
 
 var app = new Vue({
-	el: "#app",
+	el: '#app',
 	router: router,
 	data: {
-		message: "Hey Y'all!",
-		color: "red",
+		message: 'Hey Y'all!',
+		color: 'red',
 		cart: []
 	}
 })
