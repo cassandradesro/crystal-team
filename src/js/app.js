@@ -60,6 +60,7 @@ let crystals = {
 
 	},
 	citrine: {
+<<<<<<< HEAD
 		title: 'Citrine',
 		subtitle: 'the "lemon quartz"',
 		chakraName: 'Manipura',
@@ -77,6 +78,14 @@ let crystals = {
 		crystal3Image: 'dist/img/citrine/citrine-rock-3.png',
 		crystal4Image: 'dist/img/citrine/citrine-rock-4.png',
 		backgroundTexture: 'url(dist/img/citrine/citrine-texture.png)',
+=======
+		subtitle: 'the "intuitive eye"',
+		chakraName: "Sahasrara",
+		chakraNickname: "Crown Chakra", 
+		description: "Lorem ipsum dolor sit amet, con enim, exercitationem quibusdam similique porro est voluptatem impedit deserunt natus numquam, asperiores voluptates consequuntur!",
+		verticalText: "oxide mineral",
+		title: "Citrine",
+>>>>>>> master
 		homeh1Color: '#fbc75c',
 		homeTextColor: '#fbc75c',
 		homeKaleidoscope: '',
