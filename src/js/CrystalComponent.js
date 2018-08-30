@@ -2,17 +2,35 @@ console.log()
 var CrystalComponent = Vue.component("crystal-page", {
 	props: ['crystal'],
 	template: `
-		<section class="page" v-bind:style="'backgroundColor: ' + crystal.backgroundColor">
-			<!--display flex on .page, with flex-direction: row-->
 
+		<section class="page" v-bind:style="{ backgroundColor: crystal.backgroundColor, backgroundImage: crystal.backgroundTexture }">
+
+			<!--display flex on .page, with flex-direction: row-->
 			<a href="javascript:;"><img class="bag-icon" src="dist/img/bag.png"></a>
  			<!--position absolute-->
 
 			<p class="vertical-text">{{crystal.verticalText}}</p> <!--position absolute-->
 
 			<div class="column-1">
-				<h1 class="hide-on-mobile" v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.title}}</h1>
+				<h1 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.title}}</h1>
 				<h2>{{crystal.subtitle}}</h2>
+				<div class="show-on-mobile column-3">
+					<div class="bullets">
+						<div class="bullet"></div>
+						<div class="bullet"></div>
+						<div class="bullet"></div>
+						<div class="bullet"></div>
+						<div class="bullet"></div>
+					</div>
+					<!--put border-left on the .facts div then add margin-left (or padding-left) until it crosses through center of bullets-->
+					<div class="facts">
+						<p class="fact">{{crystal.fact1}}</p>
+						<p class="fact">{{crystal.fact2}}</p>
+						<p class="fact">{{crystal.fact3}}</p>
+						<p class="fact">{{crystal.fact4}}</p>
+						<p class="fact">{{crystal.fact5}}</p>
+					</div>
+				</div>
 				<div class="chakras">
 					<div class="chakra-area">
 						<h3>{{crystal.chakraName}}</h3>
@@ -25,7 +43,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 						<h4 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.chakra2Nickname}}</h4>
 					</div>
 				</div>
-				<p>{{crystal.description}}</p>
+				<p class="hide-on-mobile">{{crystal.description}}</p>
 			</div>
 
 			<div class="column-2">
@@ -50,7 +68,8 @@ var CrystalComponent = Vue.component("crystal-page", {
 			</div> <!--function module to updates numbers, crystals and dots simultaneously-->
 					
 			<div class="column-3">
-				<div class="bullets">
+				<p class="">{{crystal.description}}</p>
+				<div class="show-on-mobile" hide-on-mobile bullets">
 					<div class="bullet"></div>
 					<div class="bullet"></div>
 					<div class="bullet"></div>
@@ -58,7 +77,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 					<div class="bullet"></div>
 				</div>
 				<!--put border-left on the .facts div then add margin-left (or padding-left) until it crosses through center of bullets-->
-				<div class="facts">
+				<div class="show-on-mobile facts">
 					<p class="fact">{{crystal.fact1}}</p>
 					<p class="fact">{{crystal.fact2}}</p>
 					<p class="fact">{{crystal.fact3}}</p>
@@ -67,7 +86,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 				</div>
 			</div>
 
-			<div class="add-button" v-bind:style="'backgroundColor: ' + crystal.backgroundColor">add</div> <!--position absolute-->
+			<div class="add-button" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
 			
 		</section>
 	`

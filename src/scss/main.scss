@@ -69,3 +69,15 @@ body {
 p{
 
 }
+
+@media screen and (min-width: $tablet-and-below){
+	.show-on-mobile{
+		display: none;
+	}
+}
+@media screen and (maxx-width: $tablet-and-below){
+	.hide-on-mobbile{
+		display: none;
+	}
+}
+
