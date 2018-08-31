@@ -36,9 +36,6 @@ $red-text: #901b00;
 $background-pink: #f4bcdc;
 $pink-text: #d74b62;
 //
-$tablet-and-below: 1023px;
-$header-font:'Rakkas', cursive;
-$text-font: "bernhard-gothic-urw",sans-serif;
 
 //green fluorite
 $background-green: green;
@@ -50,10 +47,16 @@ $background-hematite: rgb(68, 68, 68);
 $hematite-text: rgb(68, 68, 68);
 //
 
+$tablet-and-below: 1023px;
+$header-font:'Rakkas', cursive;
+$text-font: "bernhard-gothic-urw",sans-serif;
+
+
+
+
 @import 'home-page';
 @import 'reset';
 @import 'crystal-page';
-
 
 
 /* 1. Main Layout ================================= */
@@ -71,12 +74,12 @@ p{
 }
 
 @media screen and (min-width: $tablet-and-below){
-	.show-on-mobile{
+	.hide-on-desktop{
 		display: none;
 	}
 }
-@media screen and (maxx-width: $tablet-and-below){
-	.hide-on-mobbile{
+@media screen and (max-width: $tablet-and-below){
+	.hide-on-mobile{
 		display: none;
 	}
 }

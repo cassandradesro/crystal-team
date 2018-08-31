@@ -26,7 +26,8 @@ nav {
 
 .crystal-titles {
 	font-size: 3.6em;
-	margin: 130px auto;
+	margin: 120px auto;
+	margin-bottom: 80px;
 	width: 77%;
 	white-space: nowrap;
 	color: #d74b62;
@@ -37,6 +38,7 @@ nav {
 @media screen and (min-width: 1024px) {
 	.crystal-titles {
 		font-size: 4em;
+		margin-bottom: 120px;
 	}
 }
 
@@ -449,16 +451,30 @@ table {
 	justify-content: center;
 	align-items: center;
 	font-family: Helvetica;
-	background-color: #caaad1;
+	position: relative;
+	z-index: 999;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #d1b0d8;
 	padding: 10%;
 	color: #fff;
 	font-family: "bernhard-gothic-urw", sans-serif;
+	font-size: 1rem;
 }
 
 @media screen and (max-width: 1023px) {
 	.page {
 		flex-direction: column;
 	}
+}
+
+.page-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: -1;
 }
 
 .bag-icon, .vertical-text, .add-button {
@@ -513,7 +529,7 @@ table {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .column-1 h1 {
@@ -523,28 +539,31 @@ table {
 	margin-bottom: 20px;
 }
 
-.column-1 h2 {
-	margin-bottom: 30px;
+.column-1 .chakras {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
 }
 
-.column-1 div {
+.column-1 .chakra-area {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 30px;
+	margin: 30px;
 }
 
-.column-1 div img {
+.column-1 .chakra-area img {
 	width: 30px;
 	height: 30px;
+	margin: 5px;
 }
 
-.column-1 div h4 {
+.column-1 .chakra-area h4 {
 	color: #4b365a;
 }
 
 .column-1 p {
-	font-size: 1rem;
 	margin-left: 40px;
 }
 
@@ -607,12 +626,12 @@ table {
 	flex-direction: row;
 }
 
-.column-3 .bullets {
+.bullets {
 	display: flex;
 	flex-direction: column;
 }
 
-.column-3 .bullets .bullet {
+.bullets .bullet {
 	width: 20px;
 	height: 20px;
 	background-color: #fff;
@@ -621,36 +640,123 @@ table {
 }
 
 @media screen and (max-width: 1023px) {
-	.column-3 .bullets {
-		display: none;
+	.bullets .bullet {
+		width: 16px;
+		height: 16px;
 	}
 }
 
-.column-3 .facts {
+.facts {
 	border-left: 2px solid #fff;
 	padding: 0 30px;
-	margin: -10px;
+	margin: -11px;
 }
 
-.column-3 .facts .fact {
+.facts .fact {
 	font-size: 20px;
 	margin-top: 20px;
 	white-space: nowrap;
+	list-style: none;
 }
 
 @media screen and (max-width: 1023px) {
-	.column-3 .facts .fact {
+	.facts .fact {
 		font-size: 16px;
+		margin-top: 16px;
 		white-space: normal;
 	}
 }
 
 @media screen and (max-width: 1023px) {
-	.column-3 .facts {
+	.facts {
 		border: none;
 		margin: 0;
 		padding: 0 0;
 	}
+}
+
+#next, #prev {
+	position: fixed;
+	z-index: 9999999;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	transition: .3s;
+}
+
+#next span, #prev span {
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 30px;
+	margin-bottom: 3px;
+	border-radius: 8px;
+	top: 50%;
+	transition: .5s;
+	background-color: rgba(0, 0, 0, 0);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+#next span:before, #next span:after, #prev span:before, #prev span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 30px;
+	margin-bottom: 3px;
+	background-color: #000;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	top: 50%;
+	transition: .5s;
+}
+
+#next span:before, #prev span:before {
+	top: -3px;
+}
+
+#next span:after, #prev span:after {
+	top: 16px;
+}
+
+#next {
+	right: 5%;
+}
+
+#next span {
+	right: 5%;
+}
+
+#next span:before, #next span:after {
+	right: 0;
+}
+
+#next span:before {
+	transform: rotate(45deg);
+}
+
+#next span:after {
+	transform: rotate(135deg);
+}
+
+#prev {
+	left: 5%;
+}
+
+#prev span {
+	left: 5%;
+}
+
+#prev span:before, #prev span:after {
+	left: 0;
+}
+
+#prev span:before {
+	transform: rotate(-45deg);
+}
+
+#prev span:after {
+	transform: rotate(-135deg);
 }
 
 /* 1. Main Layout ================================= */
@@ -660,6 +766,18 @@ table {
 
 body {
 	background: #fff;
+}
+
+@media screen and (min-width: 1023px) {
+	.hide-on-desktop {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.hide-on-mobile {
+		display: none;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */

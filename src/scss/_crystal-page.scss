@@ -175,7 +175,13 @@
 		background-color: #fff;
 		border-radius: 50%;
 		margin: 10px 0;
+		@media screen and (max-width: $tablet-and-below){
+			width: 16px;
+			height: 16px;
+		}
+
 	}
+
 }
 .facts{
 
@@ -186,8 +192,10 @@
 		font-size: 20px;
 		margin-top: 20px;
 		white-space: nowrap;
+		list-style: none;
 		@media screen and (max-width: $tablet-and-below){
 			font-size: 16px;
+			margin-top: 16px;
 			white-space: normal;
 		}
 	}
@@ -198,7 +206,105 @@
 	}
 }
 
+/////arrows for crystals on mobile////
 
+#next, #prev{ 
+	position: fixed;
+	z-index: 9999999;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	transition: .3s;
+	// @media (max-width: $breakpoint-tablet) {
+	// 	width: 40px;
+	// 	height: 40px;
+	// }
+	// @media (max-width: $breakpoint-mobile) {
+	// 	width: 20px;
+	// 	height: 20px;
+	// }
+	span{
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 30px;
+		margin-bottom: 3px;
+		border-radius: 8px;
+		top: 50%;
+		transition: .5s;
+		background-color: rgba(0,0,0,0);
+		box-shadow: 0 2px 5px rgba(0,0,0,0);
+		// @media (max-width: $breakpoint-tablet) {
+		// 	width: 20px;
+		// }
+		// @media (max-width: $breakpoint-mobile) {
+		// 	width: 10px;
+		// }
+	}
+	span:before, span:after{
+		content: '';
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 30px;
+		margin-bottom: 3px;
+		background-color: #000;
+		border-radius: 8px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+		top: 50%;
+		transition: .5s;
+		// @media (max-width: $breakpoint-tablet) {
+		// 	width: 20px;
+		// }
+		// @media (max-width: $breakpoint-mobile) {
+		// 	width: 10px;
+		// }
+	}
+	span:before{
+		top: -3px;
+		// @media (max-width: $breakpoint-tablet) {
+		// 	top: 3px;
+		// }
+		// @media (max-width: $breakpoint-mobile) {
+		// 	top: 11px;
+		// }
+	}
+	span:after{
+		top: 16px;
+	}
+}
+
+
+#next{
+	right: 5%;
+	span{
+		right: 5%;
+	}
+	span:before, span:after{
+		right: 0;
+	}
+	span:before{
+		transform: rotate(45deg);
+	}
+	span:after{
+		transform: rotate(135deg);
+	}
+}
+#prev{ 
+	left: 5%;
+	span{
+		left: 5%;
+	}
+	span:before, span:after{
+		left: 0;
+	}
+	span:before{
+		transform: rotate(-45deg);
+	}
+	span:after{
+		transform: rotate(-135deg);
+	}
+}
 
 
 
