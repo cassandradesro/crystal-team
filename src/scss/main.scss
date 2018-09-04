@@ -36,6 +36,9 @@ $red-text: #901b00;
 $background-pink: #f4bcdc;
 $pink-text: #d74b62;
 //
+$tablet-and-below: 1023px;
+$header-font:'Rakkas', cursive;
+$text-font: "bernhard-gothic-urw",sans-serif;
 
 //green fluorite
 $background-green: #256d4b;
@@ -47,10 +50,9 @@ $background-hematite: #919a9b;
 $hematite-text: rgb(68, 68, 68);
 //
 
-@import 'reset';
 @import 'home-page';
-
-
+@import 'reset';
+@import 'crystal-page';
 
 
 
