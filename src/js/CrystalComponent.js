@@ -142,8 +142,9 @@ var CrystalComponent = Vue.component("crystal-page", {
 			.from(addC, 0.2, {y:15, autoAlpha:0, ease:Power1.easeOut},'sides2')
 	
 	},
-	methods: function addItem(){
-
+	methods: {
+		addItem(){
+			
+		}
 	}
-
 })

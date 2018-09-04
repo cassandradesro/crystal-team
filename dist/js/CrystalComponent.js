@@ -69,7 +69,8 @@ var CrystalComponent = Vue.component("crystal-page", {
 
 		.from(logoC, 0.2, { x: -15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.50').add('sides1').from(checkoutC, 0.2, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '-=0.2').add('sides2').from(dotsC2, 0.2, { y: 15, autoAlpha: 0, ease: Power1.easeOut }, 'sides2').from(addC, 0.2, { y: 15, autoAlpha: 0, ease: Power1.easeOut }, 'sides2');
 	},
-	methods: function addItem() {}
-
+	methods: {
+		addItem: function addItem() {}
+	}
 });
 //# sourceMappingURL=CrystalComponent.js.map
