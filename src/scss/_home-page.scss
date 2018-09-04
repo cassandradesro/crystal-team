@@ -140,8 +140,8 @@ h3.healing-crystals{
         &.dot30{ transform: rotate(7.5deg*29) translateY(-1800%) scale(0.7); }
         &.dot31{ transform: rotate(7.5deg*30) translateY(-1800%) scale(0.7); }
         &.dot32{ transform: rotate(7.5deg*31) translateY(-1800%) scale(0.7); }
-        &.dot33{ transform: rotate(7.5deg*32) translateY(-1800%) scale(2); border: 2px solid green; background-color: transparent; &:hover{
-            background-color: green; cursor: pointer;
+        &.dot33{ transform: rotate(7.5deg*32) translateY(-1800%) scale(2); border: 2px solid #256d4b; background-color: transparent; &:hover{
+            background-color: #256d4b; cursor: pointer;
         }}
         &.dot34{ transform: rotate(7.5deg*33) translateY(-1800%) scale(0.7); }
         &.dot35{ transform: rotate(7.5deg*34) translateY(-1800%) scale(0.7); }

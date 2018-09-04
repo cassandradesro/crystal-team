@@ -35,8 +35,8 @@ let crystals = {
 	},
 	greenfluorite: {
 		title: "Green Fluorite",
-		homeh1Color: 'green',
-		homeTextColor: 'green',
+		homeh1Color: '#256d4b',
+		homeTextColor: '#256d4b',
 		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png'
 	},
 	hematite: {
