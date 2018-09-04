@@ -21,7 +21,7 @@ var HomeComponent = Vue.component("home", {
 		var homeText = this.$refs.homeTextRef;
 
 		var tl = new TimelineMax();
-		tl.from(titles, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }).from(kaliedo, 0.8, { rotation: 720, transformOrigin: '50% 50%', x: -700, autoAlpha: 0, ease: Power1.easeOut }, '+=0.15').from(homeText, 0.2, { y: -15, autoAlpha: 0, ease: Power1.easeOut }).from(logo, 0.1, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.25').from(checkout, 0.1, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.15');
+		tl.from(titles, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.25').from(kaliedo, 0.8, { rotation: 720, transformOrigin: '50% 50%', x: -700, autoAlpha: 0, ease: Power1.easeOut }, '+=0.15').from(homeText, 0.2, { y: -15, autoAlpha: 0, ease: Power1.easeOut }).from(logo, 0.1, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.25').from(checkout, 0.1, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.15');
 	}
 });
 //# sourceMappingURL=HomeComponent.js.map

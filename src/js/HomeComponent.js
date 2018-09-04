@@ -76,7 +76,7 @@ var HomeComponent = Vue.component("home", {
 
 		let tl = new TimelineMax();
 		tl
-			.from(titles, 0.3, {y:-15, autoAlpha:0, ease:Power1.easeOut})
+			.from(titles, 0.3, {y:-15, autoAlpha:0, ease:Power1.easeOut}, '+=0.25')
 			.from(kaliedo, 0.8, {rotation: 720, transformOrigin: '50% 50%', x:-700, autoAlpha:0, ease:Power1.easeOut}, '+=0.15')
 			.from(homeText, 0.2, {y:-15, autoAlpha:0, ease:Power1.easeOut})
 			.from(logo, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.25')
