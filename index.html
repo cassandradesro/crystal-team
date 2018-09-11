@@ -13,16 +13,11 @@
 
 
 	</head>
-	<body>
+	<body class="cbp-spmenu-push">
 		
 		<div id="app">
 			
-<!-- 			<nav>
-				<router-link to="/amethyst">Amethyst</router-link>
-				<router-link to="/citrine">Citrine</router-link>
-			</nav> -->
-			<cart :show="showCart"></cart>
-
+			<cart :cart="cart"></cart>
 			<router-view></router-view>
 
 		</div>

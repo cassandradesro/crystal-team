@@ -67,6 +67,16 @@ $text-font: "bernhard-gothic-urw",sans-serif;
 
 body {
 	background: #fff;
+
+	&.cbp-spmenu-push {
+		overflow-x: hidden;
+    	position: relative;
+    	left: 0;
+	}
+
+	&.cbp-spmenu-push-toleft {
+		left: -240px;
+	}
 }
 
 @media screen and (min-width: $tablet-and-below){
@@ -160,54 +170,72 @@ nav{
 	}
 }
 
+
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+	transition: all 0.3s ease;
+}
+
+
 .cart-component-container{
 	position: absolute;
+	z-index: 10000;
+	width: 100%;
 
-	img{
+	.bag-icon{
 		position: absolute;
-		top: 10px;
-		left: 10px;
-		z-index: 10000;
+		top: 5%;
+		right: 5%;
 		cursor: pointer;
-	}
-
-	.cbp-spmenu-right {
-		right: -240px;
-	}
-	.cbp-spmenu-right.cbp-spmenu-open {
-		right: 0px;
-	}
-	/* Transitions */
-
-	.cbp-spmenu,
-	.cbp-spmenu-push {
-		-webkit-transition: all 0.3s ease;
-		-moz-transition: all 0.3s ease;
-		transition: all 0.3s ease;
+		@media screen and (max-width: $tablet-and-below){
+			top: 10px;
+			right: 10px;
+		}
 	}
 
 
 	.cart-container{
 		font-family: "Rakkas", cursive;
-		position:fixed;
-		width: 240px;
-		height: 100%;
-		top: 0;
-		z-index: 1000;
+
+		&.cbp-spmenu-vertical{
+			position:fixed;
+			width: 240px;
+			height: 100%;
+			top: 0;
+			z-index: 1000;
+		}
+		&.cbp-spmenu-right{
+			right: -240px;
+		}
+		&.cbp-spmenu-open{
+			right: 0px;
+		}
+		
 
 
 		right: 0;
 		display: flex;
 		flex-direction: column;
+		font-family: $text-font;
 
 		.cart-header{
-			background-color: pink;
 			flex-grow: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			h3{
+				font-family: $text-font;
+				font-size: 2em;
+		
+
+				color: #727272;
+			}
 
 		}
 		.cart-main{
 			background-color: white;
-			flex-grow: 4;
+			flex-grow: 6;
 			display: flex;
 			justify-content: center;
 			ul{
@@ -221,8 +249,30 @@ nav{
 			
 		}
 		.cart-footer{
-			background-color: orange;
-			flex-grow: 1;
+			flex-grow: 0;
+			padding: 2em 1em;
+
+			display: flex;
+			justify-content: space-around;
+				.button-container{
+
+					.view-cart-btn{
+						font-family: $text-font;
+						font-size: 1em;
+						padding: .8em 1.2em;
+						background-color: #727272;
+						color: #fff;
+					}
+					.checkout-btn{
+						font-family: $text-font;
+						font-size: 1em;
+						padding: .8em 1.2em;
+						color: #727272;
+						border: #727272 solid 1px;
+					}
+				}
+
+			
 		}
 	}
 }

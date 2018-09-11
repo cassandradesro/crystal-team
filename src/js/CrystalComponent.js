@@ -1,10 +1,9 @@
 console.log()
 var CrystalComponent = Vue.component("crystal-page", {
-	props: ['crystal'],
+	props: ['crystal', 'cart'],
 	template: `
 
 	<section class="page" v-bind:style="{ backgroundColor: crystal.backgroundColor, backgroundImage: crystal.backgroundTexture }">
-	<a href="javascript:;"><img class="bag-icon" src="dist/img/bag.png"></a>
 	<nav>
 		<router-link to="/"><span class="nav-home circle"></span></router-link>
 		<router-link to="/amethyst"><span class="nav-a circle"></span></router-link>
@@ -77,7 +76,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 			</li>	
 		</ul>
 	</div>
-	<div class="add-button hide-on-mobile" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
+	<div @click="addItem" class="add-button hide-on-mobile" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
 	
 </section>
 	`,
@@ -200,7 +199,10 @@ var CrystalComponent = Vue.component("crystal-page", {
     		if (this.crystalSlideshowActive < 0){
     			this.crystalSlideshowActive = this.crystal.crystalImages.length - 1;
     		}
-	    }
+		},
+		addItem(){
+			
+		}
 	}
 })
 

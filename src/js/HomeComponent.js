@@ -1,8 +1,6 @@
 var HomeComponent = Vue.component("home", {
 	template: `
 		<div class="home">
-
-			<a href="javascript:;"><img src="dist/img/home/bagPurple.png" ref="checkoutRef" class="checkout"></a>
 			
 			<div class="crystal-titles" >
 				<h1 ref="titlesRef" :style=" 'color: '+crystals[chosenCrystal].homeh1Color ">{{ crystals[chosenCrystal].title }}</h1>

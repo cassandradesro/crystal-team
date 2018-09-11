@@ -1,10 +1,11 @@
 var CartComponent = Vue.component("cart", {
 	template: `
 	<div class="cart-component-container">
-	
-		<img ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/bag.png" alt="shopping bag icon">
 
-		<div v-if="show" class="cart-container cbp-spmenu cbp-spmenu-right cbp-spmenu-open">
+		<img v-if="$route.path == '/'" @click="cartToggle" ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/bag-grey.png" alt="shopping bag icon">
+		<img v-else @click="cartToggle" ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/bag.png" alt="shopping bag icon">
+
+		<div :class="'cart-container cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right' + (show ? ' cbp-spmenu-open' : '') ">
 			<div class="cart-header">
 				<h3>Your Cart</h3>
 			</div>
@@ -17,29 +18,24 @@ var CartComponent = Vue.component("cart", {
 				</ul>
 			</div>
 			<div class="cart-footer">
-				<button class="view-cart-btn">view cart</button>
-				<button class="checkout-btn">checkout</button>
+				<div class="button-container">
+					<button class="view-cart-btn">view cart</button>
+					<button class="checkout-btn">checkout</button>
+				</div>
 			</div>
 		</div>
 	</div>
 	`,
-	props: ["show"],
+	props: ["cart"], // the contents of the cart come from above
 	data: function() {
 		return {
-			
+			show: false
 		}
 	},
 	methods: {
 		cartToggle(){
-			let showRightPush = document.getElementById('showRightPush'),
-				body = document.body;
-				
-				showRightPush.onclick = function() {
-					classie.toggle( this, 'active' );
-					classie.toggle( body, 'cbp-spmenu-push-toleft' );
-					classie.toggle( menuRight, 'cbp-spmenu-open' );
-					disableOther( 'showRightPush' );
-				};
+			document.body.classList.toggle('cbp-spmenu-push-toleft' );
+			this.show = !this.show;
 		}
 	},
 	mounted: function() {
