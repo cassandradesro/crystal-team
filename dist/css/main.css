@@ -805,6 +805,8 @@ table {
 
 body {
 	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
 }
 
 @media screen and (min-width: 1023px) {

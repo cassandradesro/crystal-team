@@ -67,6 +67,8 @@ $text-font: "bernhard-gothic-urw",sans-serif;
 
 body {
 	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
 }
 
 
