@@ -42,6 +42,12 @@ h3.healing-crystals{
     color: #593a54;
     font-size: 1.2em;
     line-height: 1.4em;
+    background: url(../img/animation/tumblr_p59xe9YbiS1v93cuso1_400.gif)no-repeat;
+	background-size: cover;
+	background-position: center;
+	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
     @media screen and (max-width: 1023px){
         display: flex;
         flex-direction: column;

@@ -137,6 +137,10 @@ var app = new Vue({
 	el: '#app',
 	router: router,
 	data: {
+		message: "Hey Y'all!",
+		color: "red",
+		cart: [],
+		showCart: false,
 		facts: ''
 	}
 });
