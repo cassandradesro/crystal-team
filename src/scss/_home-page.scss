@@ -53,6 +53,10 @@ h3.healing-crystals{
         width: 34.62664714%;
         margin-left: 9.80966325%;
         max-width: 443px;
+        font-size: 1.3em;
+    }
+    @media screen and (min-width: 1224px){
+        font-size: 1.4em;
     }
 
     p:first-child{
@@ -72,7 +76,7 @@ h3.healing-crystals{
     @media screen and (min-width: 1024px){
         width: 90%;
         margin: 0 auto;
-        max-width: 1206px;
+        max-width: 1288px;
     }
 }
 
@@ -136,8 +140,8 @@ h3.healing-crystals{
         &.dot30{ transform: rotate(7.5deg*29) translateY(-1800%) scale(0.7); }
         &.dot31{ transform: rotate(7.5deg*30) translateY(-1800%) scale(0.7); }
         &.dot32{ transform: rotate(7.5deg*31) translateY(-1800%) scale(0.7); }
-        &.dot33{ transform: rotate(7.5deg*32) translateY(-1800%) scale(2); border: 2px solid green; background-color: transparent; &:hover{
-            background-color: green; cursor: pointer;
+        &.dot33{ transform: rotate(7.5deg*32) translateY(-1800%) scale(2); border: 2px solid #256d4b; background-color: transparent; &:hover{
+            background-color: #256d4b; cursor: pointer;
         }}
         &.dot34{ transform: rotate(7.5deg*33) translateY(-1800%) scale(0.7); }
         &.dot35{ transform: rotate(7.5deg*34) translateY(-1800%) scale(0.7); }
@@ -165,7 +169,7 @@ h3.healing-crystals{
         width: 70%;
         max-width: 400px;
         align-content: center;
-        img{
+        canvas, img {
             width: 100%;
             height: 100%;
             max-width: 470px;
@@ -178,10 +182,10 @@ h3.healing-crystals{
         width: 42%;
         top:-60px;
 
-        img{
+        canvas, img {
             width: 100%;
             height: 100%;
-            max-width: 470px;
+            max-width: 505px;
         }
        
     }

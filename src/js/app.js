@@ -28,7 +28,6 @@ let crystals = {
 		backgroundTexture: 'url(dist/img/rose/rose-texture.png)',
 		homeh1Color: '#d74b62',
 		homeTextColor: '#d74b62',
-		homeKaleidoscope: '',
 		backgroundColor: '#f6c3e0',
 		numberImages:[
 			'dist/img/numbers/number-1.png',
@@ -36,6 +35,8 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
+		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png'
+
 	},
 	amethyst: {
 		title: 'Amethyst',
@@ -61,7 +62,6 @@ let crystals = {
 		backgroundTexture: 'url(dist/img/amethyst/amethyst-texture.png)',
 		homeh1Color: '#4b365a',
 		homeTextColor: '#4b365a',
-		homeKaleidoscope: '',
 		backgroundColor: '#d1b0d8',
 		numberImages:[
 			'dist/img/numbers/number-1.png',
@@ -69,6 +69,7 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
+		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png'
 
 	},
 	citrine: {
@@ -95,7 +96,6 @@ let crystals = {
 		backgroundTexture: 'url(dist/img/citrine/citrine-texture.png)',
 		homeh1Color: '#fbc75c',
 		homeTextColor: '#fbc75c',
-		homeKaleidoscope: '',
 		backgroundColor: '#da7713',
 		numberImages:[
 			'dist/img/numbers/number-1.png',
@@ -103,6 +103,7 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
+		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png'
 	},
 	jasper: {
 		title: 'Red Jasper',
@@ -131,7 +132,6 @@ let crystals = {
 		backgroundTexture: 'url(dist/img/jasper/jasper-texture.png)',
 		homeh1Color: '#901b00',
 		homeTextColor: '#901b00',
-		homeKaleidoscope: '',
 		backgroundColor: '#ff7f79',
 		numberImages:[
 			'dist/img/numbers/number-1.png',
@@ -173,6 +173,14 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
+		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
+		
+	},
+	greenfluorite: {
+		title: "Green Fluorite",
+		homeh1Color: '#256d4b',
+		homeTextColor: '#256d4b',
+		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png'
 	},
 	hematite: {
 		title: 'Hematite',
@@ -197,8 +205,7 @@ let crystals = {
 		],
 		backgroundTexture: 'url(dist/img/hematite/hematite-texture.png)',
 		homeh1Color: 'rgb(68, 68, 68)',
-		homeTextColor: 'rgb(68, 68, 68)',
-		homeKaleidoscope: '', 
+		homeTextColor: 'rgb(68, 68, 68)', 
 		backgroundColor: '#9ca7a9',
 		numberImages:[
 			'dist/img/numbers/number-1.png',
@@ -206,6 +213,7 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
+		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png'
 	}
 }
 
