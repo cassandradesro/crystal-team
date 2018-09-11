@@ -36,24 +36,27 @@ $red-text: #901b00;
 $background-pink: #f4bcdc;
 $pink-text: #d74b62;
 //
+
+//green fluorite
+$background-green: #256d4b;
+$green-text: #256d4b;
+//
+
+//hematite
+$background-hematite: #919a9b;
+$hematite-text: rgb(68, 68, 68);
+//
+
 $tablet-and-below: 1023px;
 $header-font:'Rakkas', cursive;
 $text-font: "bernhard-gothic-urw",sans-serif;
 
-//green fluorite
-$background-green: green;
-$green-text: green;
-//
 
-//hematite
-$background-hematite: rgb(68, 68, 68);
-$hematite-text: rgb(68, 68, 68);
-//
+
 
 @import 'home-page';
 @import 'reset';
 @import 'crystal-page';
-
 
 
 /* 1. Main Layout ================================= */
@@ -65,6 +68,98 @@ $hematite-text: rgb(68, 68, 68);
 body {
 	background: #fff;
 }
+
+@media screen and (min-width: $tablet-and-below){
+	.hide-on-desktop{
+		display: none;
+	}
+}
+@media screen and (max-width: $tablet-and-below){
+	.hide-on-mobile{
+		display: none;
+	}
+}
+
+nav{
+	width: 50%;
+	z-index: 999;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 12px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-bottom: 3px solid #fff;
+	@media screen and (max-width: $tablet-and-below){
+		position: unset;
+		transform: translateX(0);
+		width: 100%;
+		top: unset;
+		left: unset;
+		margin-bottom: 50px;
+		border-bottom: 2px solid #fff;
+	}
+	
+	.circle{
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: transparent;
+	}
+	
+	
+}
+
+.nav-home{
+	border: 3px solid #fff;
+	&:hover{
+		background-color:  #fff;
+	}
+}
+.nav-a{
+	border: 3px solid #4b365a;
+	&:hover{
+		background-color:  #4b365a;
+	}
+}
+.nav-c{
+	border: 3px solid #fbc75c;
+	&:hover{
+		background-color:  #fbc75c;
+	}
+}
+
+.nav-j{
+	border: 3px solid #901b00;
+	&:hover{
+		background-color: #901b00;
+	}
+}	
+
+.nav-f{
+	border: 3px solid #256d4b;
+	&:hover{
+		background-color: #256d4b;
+	}
+}
+
+.nav-r{
+	border: 3px solid #d74b62;
+	&:hover{
+		background-color: #d74b62;
+	}
+}
+
+.nav-h{
+	border: 3px solid rgb(68, 68, 68);
+	&:hover{
+		background-color:  rgb(68, 68, 68);
+	}
+}
+
 .cart-component-container{
 	position: absolute;
 
