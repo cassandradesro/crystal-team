@@ -810,6 +810,8 @@ table {
 
 body {
 	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
 }
 
 body.cbp-spmenu-push {

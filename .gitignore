@@ -2,3 +2,5 @@
 node_modules
 package-lock.json
 yarn.lock
+dist/css/main.css.map
+dist/css/main.css

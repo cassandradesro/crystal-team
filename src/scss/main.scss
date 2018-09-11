@@ -77,6 +77,8 @@ body {
 	&.cbp-spmenu-push-toleft {
 		left: -240px;
 	}
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
 }
 
 @media screen and (min-width: $tablet-and-below){
