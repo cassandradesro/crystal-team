@@ -1,12 +1,8 @@
 'use strict';
 
-var _crystals;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 console.log('Hello World from app.js! Crystal Teams Project co-developed by Erin Kahn, \n\tCassandra Desrosiers, and Kat Sudakova. Designed by Gwynn Prewitt');
 
-var crystals = (_crystals = {
+var crystals = {
 
 	rosequartz: {
 		title: 'Rose Quartz',
@@ -23,7 +19,9 @@ var crystals = (_crystals = {
 		homeTextColor: '#d74b62',
 		backgroundColor: '#f6c3e0',
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
-		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png'
+
+		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png',
+		price: "$30"
 
 	},
 	amethyst: {
@@ -41,7 +39,9 @@ var crystals = (_crystals = {
 		homeTextColor: '#4b365a',
 		backgroundColor: '#d1b0d8',
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
-		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png'
+
+		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png',
+		price: "$30"
 
 	},
 	citrine: {
@@ -59,8 +59,11 @@ var crystals = (_crystals = {
 		homeTextColor: '#fbc75c',
 		backgroundColor: '#da7713',
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
-		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png'
+
+		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png',
+		price: "$30"
 	},
+
 	jasper: {
 		title: 'Red Jasper',
 		subtitle: 'the "blood of Mother Earth"',
@@ -78,10 +81,13 @@ var crystals = (_crystals = {
 		homeh1Color: '#901b00',
 		homeTextColor: '#901b00',
 		backgroundColor: '#ff7f79',
-		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png']
+		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
+
+		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
+		price: "$30"
 
 	},
-	greenfluorite: _defineProperty({
+	greenfluorite: {
 		title: 'Green Fluorite',
 		subtitle: 'the "gentle healer"',
 		chakraName: 'Anahata',
@@ -92,34 +98,36 @@ var crystals = (_crystals = {
 		facts: ['dispels negative energy', 're-energizes the atmosphere', 'keeps you focused and on track', 'enhances the immune system', 'heals emotional and physical scars'],
 		crystalImages: ['dist/img/fluorite/fluorite-rock-1.png', 'dist/img/fluorite/fluorite-rock-2.png', 'dist/img/fluorite/fluorite-rock-3.png', 'dist/img/fluorite/fluorite-rock-4.png'],
 		backgroundTexture: 'url(dist/img/fluorite/fluorite-texture-01.png)',
-		homeh1Color: 'green',
-		homeTextColor: 'green',
-		homeKaleidoscope: '',
+		homeh1Color: '#256d4b',
+		homeTextColor: '#256d4b',
 		backgroundColor: '#78d7a9',
-		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png']
-	}, 'homeKaleidoscope', 'dist/img/home/red-kaleidoscope.png')
-}, _defineProperty(_crystals, 'greenfluorite', {
-	title: "Green Fluorite",
-	homeh1Color: '#256d4b',
-	homeTextColor: '#256d4b',
-	homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png'
-}), _defineProperty(_crystals, 'hematite', {
-	title: 'Hematite',
-	subtitle: 'the "gentle healer"',
-	chakraName: 'Muladhara',
-	chakraNickname: 'Root Chakra',
-	chakraImage: 'dist/img/chakras/root-chakra.png',
-	description: 'Colors range from black, gray to silver-gray; occasionally can be brown to reddish brown. Some specimens are iridescent, and other are multicolored, banded gray or dark red.',
-	verticalText: 'oxide mineral',
-	facts: ['provides pain relief', 'strengthens self-confdience', 'protects against geopathic stress', 'enhances memory and evokes deep thought', 'very protective and helps you stay grounded'],
-	crystalImages: ['dist/img/hematite/hematite-rock-1.png', 'dist/img/hematite/hematite-rock-2.png', 'dist/img/hematite/hematite-rock-3.png', 'dist/img/hematite/hematite-rock-4.png'],
-	backgroundTexture: 'url(dist/img/hematite/hematite-texture.png)',
-	homeh1Color: 'rgb(68, 68, 68)',
-	homeTextColor: 'rgb(68, 68, 68)',
-	backgroundColor: '#9ca7a9',
-	numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
-	homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png'
-}), _crystals);
+		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
+
+		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png',
+		price: "$30"
+
+	},
+
+	hematite: {
+		title: 'Hematite',
+		subtitle: 'the "gentle healer"',
+		chakraName: 'Muladhara',
+		chakraNickname: 'Root Chakra',
+		chakraImage: 'dist/img/chakras/root-chakra.png',
+		description: 'Colors range from black, gray to silver-gray; occasionally can be brown to reddish brown. Some specimens are iridescent, and other are multicolored, banded gray or dark red.',
+		verticalText: 'oxide mineral',
+		facts: ['provides pain relief', 'strengthens self-confdience', 'protects against geopathic stress', 'enhances memory and evokes deep thought', 'very protective and helps you stay grounded'],
+		crystalImages: ['dist/img/hematite/hematite-rock-1.png', 'dist/img/hematite/hematite-rock-2.png', 'dist/img/hematite/hematite-rock-3.png', 'dist/img/hematite/hematite-rock-4.png'],
+		backgroundTexture: 'url(dist/img/hematite/hematite-texture.png)',
+		homeh1Color: 'rgb(68, 68, 68)',
+		homeTextColor: 'rgb(68, 68, 68)',
+		backgroundColor: '#9ca7a9',
+		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
+
+		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png',
+		price: "$30" }
+
+};
 
 var router = new VueRouter({
 	routes: [{ path: '', component: HomeComponent, props: { crystals: crystals } }, { path: '/amethyst', component: CrystalComponent, props: { crystal: crystals.amethyst } }, { path: '/citrine', component: CrystalComponent, props: { crystal: crystals.citrine } }, { path: '/jasper', component: CrystalComponent, props: { crystal: crystals.jasper } }, { path: '/rosequartz', component: CrystalComponent, props: { crystal: crystals.rosequartz } }, { path: '/greenfluorite', component: CrystalComponent, props: { crystal: crystals.greenfluorite } }, { path: '/hematite', component: CrystalComponent, props: { crystal: crystals.hematite } }]

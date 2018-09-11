@@ -4,35 +4,28 @@ var CrystalComponent = Vue.component("crystal-page", {
 	template: `
 
 		<section class="page" v-bind:style="{ backgroundColor: crystal.backgroundColor, backgroundImage: crystal.backgroundTexture }">
-			<nav>
-				<router-link to="/amethyst"><span id="nav-a" class="circle"></span></router-link>
-				<router-link to="/citrine"><span  id="nav-c"class="circle"></span></router-link>
-				<router-link to="/jasper"><span id="nav-j" class="circle"></span></router-link>
-				<router-link to="/greenfluorite"><span id="nav-f" class="circle"></span></router-link>
-				<router-link to="/rosequartz"><span id="nav-r" class="circle"></span></router-link>
-				<router-link to="/hematite"><span id="nav-h" class="circle"></span></router-link>
-			</nav>
-
-			<!--display flex on .page, with flex-direction: row-->
 			<a href="javascript:;"><img class="bag-icon" src="dist/img/bag.png"></a>
- 			<!--position absolute-->
 
-			<p class="vertical-text">{{crystal.verticalText}}</p> <!--position absolute-->
+			<nav>
+				<router-link to="/"><span class="nav-home circle"></span></router-link>
+
+				<router-link to="/amethyst"><span class="nav-a circle"></span></router-link>
+				<router-link to="/citrine"><span class="nav-c circle"></span></router-link>
+				<router-link to="/jasper"><span class="nav-j circle"></span></router-link>
+				<router-link to="/greenfluorite"><span class="nav-f circle"></span></router-link>
+				<router-link to="/rosequartz"><span class="nav-r circle"></span></router-link>
+				<router-link to="/hematite"><span class="nav-h circle"></span></router-link>
+			</nav>
 
 			<div class="column-1">
 				<h1 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.title}}</h1>
 				<h2>{{crystal.subtitle}}</h2>
 				<div class="hide-on-desktop column-3">
-					<div class="bullets">
-						<div class="bullet"></div>
-						<div class="bullet"></div>
-						<div class="bullet"></div>
-						<div class="bullet"></div>
-						<div class="bullet"></div>
-					</div>
+					
 					<ul class="facts">
 						<li class="fact" v-for="fact in crystal.facts">
-							{{fact}}
+						<div class="bullet"></div>
+						{{fact}}
 						</li>
 					
 					</ul>
@@ -51,28 +44,30 @@ var CrystalComponent = Vue.component("crystal-page", {
 				</div>
 				<p class="hide-on-mobile">{{crystal.description}}</p>
 			</div>
-			<div @click="prev(1)" id="prev" class="hide-on-desktop">
-				<span v-bind:style="'color: ' + crystal.homeh1Color"></span>
-			</div>
+			<p class="vertical-text">{{crystal.verticalText}}</p>
 			<div class="column-2">
 
-				<div class="numbers">
-					<img v-for="(numberImage, index) in crystal.numberImages"  v-if="index == crystalSlideshowActive" v-bind:src="numberImage" alt="number one">
-
+				<div @click="prev(1)"  class="hide-on-desktop prev" v-bind:style="'border-color:' + crystal.homeh1Color">
 				</div>
-				<div class="crystals">
-					<img v-for="(crystalImage, index) in crystal.crystalImages" v-if="index == crystalSlideshowActive" v-bind:src="crystalImage" alt="crystal">
+				<div class="main">
+					<div class="numbers">
+						<img v-for="(numberImage, index) in crystal.numberImages"  v-if="index == crystalSlideshowActive" v-bind:src="numberImage" alt="number one">
+						<div class="crystals">
+							<img v-for="(crystalImage, index) in crystal.crystalImages" v-if="index == crystalSlideshowActive" v-bind:src="crystalImage" alt="crystal">
+						</div>
+					</div>
+					
+					<ul class="dots">
+						<div v-for="(crystalImage, index) in crystal.crystalImages" v-bind:style="(index == crystalSlideshowActive)?'border: 2px solid ' + crystal.homeh1Color : '' " v-on:click="jump(index)" ></div>
 
+					</ul>
+					<p class="price" v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.price}}</p>
 				</div>
-				<ul class="dots">
-					<div v-for="(crystalImage, index) in crystal.crystalImages" v-bind:style="(index == crystalSlideshowActive)?'border: 2px solid ' + crystal.homeh1Color : '' " v-on:click="jump(index)" ></div>
+				<div @click="next(1)" class="hide-on-desktop next" v-bind:style="'border-color:' + crystal.homeh1Color">
+				</div>
+			</div> <!--function module to updates numbers, crystals and dots simultaneously-->	
+			<div class="add-button hide-on-desktop" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
 
-				</ul>
-
-			</div> <!--function module to updates numbers, crystals and dots simultaneously-->
-			<div  @click="next(1)" id="next" class="hide-on-desktop">
-				<span v-bind:style="'color: ' + crystal.homeh1Color"></span>
-			</div>		
 			<div class="column-3">
 				<p class="hide-on-desktop">{{crystal.description}}</p>
 				<div class="hide-on-mobile  bullets">
@@ -85,12 +80,11 @@ var CrystalComponent = Vue.component("crystal-page", {
 				<ul class="hide-on-mobile facts">
 					<li class="fact" v-for="fact in crystal.facts">
 						{{fact}}
-					</li>
-					
+					</li>	
 				</ul>
 			</div>
 
-			<div class="add-button" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
+			<div class="add-button hide-on-mobile" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
 			
 		</section>
 	`,

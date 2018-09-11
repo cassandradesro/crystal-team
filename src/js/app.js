@@ -35,7 +35,9 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
-		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png'
+		
+		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png',
+		price: "$30",
 
 	},
 	amethyst: {
@@ -69,7 +71,9 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
-		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png'
+		
+		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png',
+		price: "$30",
 
 	},
 	citrine: {
@@ -103,8 +107,11 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
-		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png'
-	},
+	
+		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png',
+		price: "$30",
+},
+
 	jasper: {
 		title: 'Red Jasper',
 		subtitle: 'the "blood of Mother Earth"',
@@ -140,6 +147,9 @@ let crystals = {
             'dist/img/numbers/number-4.png',
 		],
 		
+		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
+		price: "$30",
+
 	},
 	greenfluorite: {
 		title: 'Green Fluorite',
@@ -163,9 +173,8 @@ let crystals = {
 			'dist/img/fluorite/fluorite-rock-4.png',
 		],
 		backgroundTexture: 'url(dist/img/fluorite/fluorite-texture-01.png)',
-		homeh1Color: 'green',
-		homeTextColor: 'green',
-		homeKaleidoscope: '', 
+		homeh1Color: '#256d4b',
+		homeTextColor: '#256d4b',
 		backgroundColor: '#78d7a9',
 		numberImages:[
 			'dist/img/numbers/number-1.png',
@@ -173,15 +182,13 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
-		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
 		
+		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png',
+		price: "$30",
+
 	},
-	greenfluorite: {
-		title: "Green Fluorite",
-		homeh1Color: '#256d4b',
-		homeTextColor: '#256d4b',
-		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png'
-	},
+
+	
 	hematite: {
 		title: 'Hematite',
 		subtitle: 'the "gentle healer"',
@@ -213,8 +220,10 @@ let crystals = {
             'dist/img/numbers/number-3.png',
             'dist/img/numbers/number-4.png',
 		],
-		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png'
-	}
+	
+		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png',
+		price: "$30",}
+
 }
 
 const router = new VueRouter({
