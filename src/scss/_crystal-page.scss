@@ -6,16 +6,32 @@
 	justify-content: center;
 	align-items: center;
 	font-family: Helvetica;
-	background-color: $background-purple;
+	position: relative;
+	z-index:999;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #d1b0d8;
 	padding: 10%;
+	font-weight: 300;
 	color: #fff;
 	font-family: $text-font;
+	font-size: 1rem;
+	letter-spacing: 1px;
 	@media screen and (max-width: $tablet-and-below){
 		flex-direction: column;
 
 	}
 }
 
+.page-bg{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: -1;
+}
 .bag-icon, .vertical-text, .add-button{
 	position: absolute;
 }
@@ -23,6 +39,11 @@
 .bag-icon{
 	top: 5%;
 	right: 5%;
+	@media screen and (max-width: $tablet-and-below){
+		top: 10px;
+		right: 10px;
+		
+	}
 }
 
 .vertical-text{
@@ -30,8 +51,9 @@
 	top: 50%;
 	left: 5%;
 	@media screen and (max-width: $tablet-and-below){
-		top: 70%;
-		left: 40%;
+		position: unset;
+		margin: 60px 0 40px 0;
+		font-size: 1.5rem;
 	}
 }
 .add-button{
@@ -42,11 +64,19 @@
 	bottom: 5%;
 	background-color: $background-purple;
 	color: #fff;
-	box-shadow: 1px 0px 24px 12px rgba(0, 0, 0, 0.2);
+	box-shadow: 10px 10px 64px 36px rgba(114,0,48,0.11);
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	letter-spacing: 3px;
+	@media screen and (max-width: $tablet-and-below){
+		position: unset;
+		margin-top: 50px;
+		width: 100px;
+		height: 100px;
+		font-size: 1.5rem;
+	}
 }
 .column-1, .column-2, .column-3{
 	width: 33.3%;
@@ -61,38 +91,62 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 18px;
+	font-size: 20px;
+	@media screen and (max-width: $tablet-and-below){
+		
+	}
 	h1{
 		color: $text-purple;
-		font-size: 3rem;
+		font-size: 3.5rem;
 		font-family: $header-font;
 		margin-bottom: 20px;
 	}
 	h2{
-		margin-bottom: 30px;
-
+		font-weight: 100;
+		font-size: 1.5rem;
 	}
-	div{
+
+	.chakras{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: center;
+	}
+	.chakra-area{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 30px;
+		margin: 30px;
 
 
 		h3{
-			
+			@media screen and (max-width: $tablet-and-below){
+				font-weight: 500;
+				font-size: 1.8rem;
+			}
 		}
 		img{
 			width: 30px;
 			height: 30px;
+			margin: 5px;
+			transition: .3s;
+			@media screen and (max-width: $tablet-and-below){
+				width: 70px;
+				height: 70px;
+			}
+
 		}
 		h4{
 			color: $text-purple;
+			@media screen and (max-width: $tablet-and-below){
+				font-weight: 500;
+				font-size: 1.8rem;
+			}
+
 		}
 
 	}
 	p{
-		font-size: 1rem;
 		margin-left: 40px;
 		@media screen and (max-width: $tablet-and-below){
 			margin-left: unset;
@@ -105,84 +159,145 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	.number{
-		display: none;
+	.numbers{
 		position: relative;
-		top: 50%;
-		left: 50%;
-		&.active{
-			display: block;
+		left: -20%;
+		top: 70px;
+		transition: .3s;
+		@media screen and (max-width: $tablet-and-below){
+			width: 50%;
+			left: 10%;
+			img{
+				width: 50%;
+			}
+		}
+		.crystals{
+			position: relative;
+			left: 90%;
+			transform: translate(-50%, -50%);
+			transition: .3s;
+			@media screen and (max-width: $tablet-and-below){
+				width: 100%;
+
+				img{
+					width: 100%;
+
+				}
+			}
 		}
 	}
-	.crystal{
-		display: none;
-		position: relative;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		&.active{
-			display: block;
-		}
-	}
+	
 	.dots{
 		display: flex;
 		flex-direction: row;
-		.dot{
+		justify-content: center;
+		div {
 			width: 15px;
 			height: 15px;
 			border-radius: 50%;
 			background-color: #fff;
-			margin-right: 10px;
+			margin-right: 20px;
+			transition: .3s;
+
 			&.active{
-				border: 2px solid $text-purple;
+				border: 3px solid $text-purple;
+				
 			}
 
+		}
+		@media screen and (max-width: $tablet-and-below){
+			margin-top: 50px;
+		}
+	}
+	.price{
+		font-size: 2rem;
+		margin-top: 50px;
+		font-weight: 500;
+	}
+	@media screen and (max-width: $tablet-and-below){
+		flex-direction: row;
+		justify-content: space-between;
+		.main{
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
 		}
 	}
 }
 .column-3{
 	display: flex;
 	flex-direction: row;
-	.bullets{
+	@media screen and (max-width: $tablet-and-below){
 		display: flex;
-		flex-direction: column;
-		.bullet{
-			width: 20px;
-			height: 20px;
-			background-color: #fff;
-			border-radius: 50%;
-			margin: 10px 0;
-		}
-		@media screen and (max-width: $tablet-and-below){
-			display: none;
-		}
-	}
-	.facts{
-
-		border-left: 2px solid #fff;
-		padding: 0 30px ;
-		margin: -10px;
-		.fact{
-			font-size: 20px;
-			margin-top: 20px;
-			white-space: nowrap;
-			@media screen and (max-width: $tablet-and-below){
-				font-size: 16px;
-				white-space: normal;
-			}
-		}
-		@media screen and (max-width: $tablet-and-below){
-			border: none;
-			margin: 0;
-			padding: 0 0;
+		justify-content: center;
+		flex-direction: row;
+		p{
+			margin-top: 50px;
+			font-size: 1.2rem;
 		}
 	}
 }
 
+.bullets{
+	display: flex;
+	flex-direction: column;
+}
+.bullet{
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin: 15px 0;
+	@media screen and (max-width: $tablet-and-below){
+		width: 17px;
+		height: 17px;
+		margin: 0 5px;
+	}
 
+}
+.facts{
 
+	border-left: 2px solid #fff;
+	padding: 0 30px ;
+	margin: -6px;
+	
+	.fact{
+		font-size: 20px;
+		margin-top: 20px;
+		white-space: nowrap;
+		@media screen and (max-width: $tablet-and-below){
+			font-size: 19px;
+			white-space: normal;
+			margin: 26px 0;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+	@media screen and (max-width: $tablet-and-below){
+		border: none;
+		margin: 0;
+		padding: 0 0;
+		margin: 0 20px
+	}
+}
 
+/////arrows for crystals on mobile////
 
+.next{
+	border: solid;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 20px;
+	transform: rotate(-45deg);	
+}
+.prev{
+	border: solid;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 20px;
+	transform: rotate(135deg);	
+}
 
 
 
