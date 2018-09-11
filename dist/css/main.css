@@ -921,8 +921,10 @@ nav .circle {
 
 .cart-component-container img {
 	position: absolute;
-	top: 5%;
-	left: 5%;
+	top: 10px;
+	left: 10px;
+	z-index: 10000;
+	cursor: pointer;
 }
 
 .cart-component-container .cbp-spmenu-right {
@@ -941,6 +943,7 @@ nav .circle {
 }
 
 .cart-component-container .cart-container {
+	font-family: "Rakkas", cursive;
 	position: fixed;
 	width: 240px;
 	height: 100%;
@@ -959,6 +962,18 @@ nav .circle {
 .cart-component-container .cart-container .cart-main {
 	background-color: white;
 	flex-grow: 4;
+	display: flex;
+	justify-content: center;
+}
+
+.cart-component-container .cart-container .cart-main ul {
+	padding-top: 20px;
+}
+
+.cart-component-container .cart-container .cart-main ul li {
+	margin-bottom: 20px;
+	font-size: 1.5em;
+	font-weight: 100;
 }
 
 .cart-component-container .cart-container .cart-footer {

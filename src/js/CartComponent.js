@@ -1,7 +1,9 @@
 var CartComponent = Vue.component("cart", {
 	template: `
-	<div class="cart-component-container cbp-spmenu-push cbp-spmenu-push-toleft">
-		<img ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/bag.png" alt="shopping bag icon"> 
+	<div class="cart-component-container">
+	
+		<img ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/bag.png" alt="shopping bag icon">
+
 		<div v-if="show" class="cart-container cbp-spmenu cbp-spmenu-right cbp-spmenu-open">
 			<div class="cart-header">
 				<h3>Your Cart</h3>

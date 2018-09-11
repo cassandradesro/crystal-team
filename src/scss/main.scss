@@ -165,8 +165,10 @@ nav{
 
 	img{
 		position: absolute;
-		top: 5%;
-		left: 5%;
+		top: 10px;
+		left: 10px;
+		z-index: 10000;
+		cursor: pointer;
 	}
 
 	.cbp-spmenu-right {
@@ -186,6 +188,7 @@ nav{
 
 
 	.cart-container{
+		font-family: "Rakkas", cursive;
 		position:fixed;
 		width: 240px;
 		height: 100%;
@@ -200,10 +203,22 @@ nav{
 		.cart-header{
 			background-color: pink;
 			flex-grow: 1;
+
 		}
 		.cart-main{
 			background-color: white;
 			flex-grow: 4;
+			display: flex;
+			justify-content: center;
+			ul{
+				padding-top: 20px;
+				li{
+					margin-bottom: 20px;
+					font-size: 1.5em;
+					font-weight: 100;
+				}
+			}
+			
 		}
 		.cart-footer{
 			background-color: orange;
