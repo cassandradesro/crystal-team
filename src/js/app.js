@@ -70,6 +70,7 @@ var app = new Vue({
 	data: {
 		message: "Hey Y'all!",
 		color: "red",
-		cart: []
+		cart: [],
+		showCart: true
 	}
 })

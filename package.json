@@ -4,6 +4,7 @@
   "description": "A good starting point for new Circus students",
   "main": "gulpfile.js",
   "dependencies": {
+    "desandro-classie": "^1.0.1",
     "npm": "^6.4.0"
   },
   "devDependencies": {

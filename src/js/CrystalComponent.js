@@ -5,7 +5,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 		<section class="page">
 			<!--display flex on .page, with flex-direction: row-->
 
-			<img ref="checkoutCRef" class="bag-icon" src="dist/img/bag.png" alt="shopping bag icon"> <!--position absolute-->
+			<!--position absolute-->
 			<p ref="logoCRef" class="vertical-text">oxide mineral</p> <!--position absolute-->
 
 			<div ref="C1Ref" class="column-1">
@@ -136,7 +136,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 			
 			.from(logoC, 0.2, {x:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.50')
 			.add('sides1')
-			.from(checkoutC, 0.2, {y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.2')
+			// .from(checkoutC, 0.2, {y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.2')
 			.add('sides2')
 			.from(dotsC2, 0.2, {y:15, autoAlpha:0, ease:Power1.easeOut},'sides2')
 			.from(addC, 0.2, {y:15, autoAlpha:0, ease:Power1.easeOut},'sides2')

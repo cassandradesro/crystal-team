@@ -669,4 +669,56 @@ body {
 	background: #fff;
 }
 
+.cart-component-container {
+	position: absolute;
+	/* Transitions */
+}
+
+.cart-component-container img {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+
+.cart-component-container .cbp-spmenu-right {
+	right: -240px;
+}
+
+.cart-component-container .cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+.cart-component-container .cbp-spmenu,
+.cart-component-container .cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.cart-component-container .cart-container {
+	position: fixed;
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.cart-component-container .cart-container .cart-header {
+	background-color: pink;
+	flex-grow: 1;
+}
+
+.cart-component-container .cart-container .cart-main {
+	background-color: white;
+	flex-grow: 4;
+}
+
+.cart-component-container .cart-container .cart-footer {
+	background-color: orange;
+	flex-grow: 1;
+}
+
 /*# sourceMappingURL=main.css.map */
