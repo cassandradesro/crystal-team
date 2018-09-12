@@ -98,7 +98,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 			if (_this.crystalSlideshowActive > _this.crystal.crystalImages.length - 1) {
 				_this.crystalSlideshowActive = 0;
 			}
-		}, 8000);
+		}, 3000);
 	},
 	methods: {
 		jump: function jump(index) {
