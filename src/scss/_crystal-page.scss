@@ -39,11 +39,11 @@
 .bag-icon{
 	top: 5%;
 	right: 5%;
-	@media screen and (max-width: $tablet-and-below){
-		top: 10px;
-		right: 10px;
-		
+	@media screen and (max-width: 1023px){
+		top: 20px;
+		right: 20px;
 	}
+
 }
 
 .vertical-text{

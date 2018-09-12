@@ -502,8 +502,8 @@ table {
 
 @media screen and (max-width: 1023px) {
 	.bag-icon {
-		top: 10px;
-		right: 10px;
+		top: 20px;
+		right: 20px;
 	}
 }
 
