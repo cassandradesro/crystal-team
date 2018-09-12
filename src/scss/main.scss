@@ -75,7 +75,10 @@ body {
 	}
 
 	&.cbp-spmenu-push-toleft {
-		left: -80%;
+		left: -40%;
+		@media screen and (max-width: $tablet-and-below){
+			width: -80%;
+		}
 	}
 	-webkit-font-smoothing: antialiased;
 	text-rendering: auto;
@@ -187,7 +190,7 @@ nav{
 
 	.bag-icon{
 		position: absolute;
-		top: 5%;
+		top: 2em;
 		right: 5%;
 		cursor: pointer;
 		@media screen and (max-width: $tablet-and-below){
@@ -202,13 +205,19 @@ nav{
 
 		&.cbp-spmenu-vertical{
 			position:fixed;
-			width: 80%;
+			width: 40%;
 			height: 100%;
 			top: 0;
 			z-index: 1000;
+			@media screen and (max-width: $tablet-and-below){
+				width: 80%;
+			}
 		}
 		&.cbp-spmenu-right{
-			right: -80%;
+			right: -40%;
+			@media screen and (max-width: $tablet-and-below){
+				width: -80%;
+			}
 		}
 		&.cbp-spmenu-open{
 			right: 0px;
@@ -230,8 +239,6 @@ nav{
 			h3{
 				font-family: $text-font;
 				font-size: 2em;
-		
-
 				color: #727272;
 			}
 
@@ -246,7 +253,7 @@ nav{
 				padding-top: 20px;
 				li{
 					display: flex;
-					justify-content: space-between;
+					justify-content: space-evenly;
 					margin-bottom: 20px;
 					font-size: 1.5em;
 					font-weight: 100;
@@ -277,6 +284,7 @@ nav{
 				.button-container{
 
 					.view-cart-btn{
+						cursor: pointer;
 						font-family: $text-font;
 						font-size: 1em;
 						padding: .8em 1.2em;
@@ -284,6 +292,7 @@ nav{
 						color: #fff;
 					}
 					.checkout-btn{
+						cursor: pointer;
 						font-family: $text-font;
 						font-size: 1em;
 						padding: .8em 1.2em;

@@ -3,7 +3,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 	template: `
 
 	<section class="page" v-bind:style="{ backgroundColor: crystal.backgroundColor, backgroundImage: crystal.backgroundTexture }">
-	<nav>
+	<nav ref="navRef">
 		<router-link to="/"><span class="nav-home circle"></span></router-link>
 		<router-link to="/amethyst"><span class="nav-a circle"></span></router-link>
 		<router-link to="/citrine"><span class="nav-c circle"></span></router-link>
@@ -12,7 +12,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 		<router-link to="/rosequartz"><span class="nav-r circle"></span></router-link>
 		<router-link to="/hematite"><span class="nav-h circle"></span></router-link>
 	</nav>
-	<div class="column-1">
+	<div ref="C1Ref" class="column-1">
 		<h1 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.title}}</h1>
 		<h2>{{crystal.subtitle}}</h2>
 		<div class="hide-on-desktop column-3">
@@ -39,8 +39,8 @@ var CrystalComponent = Vue.component("crystal-page", {
 		</div>
 		<p class="hide-on-mobile">{{crystal.description}}</p>
 	</div>
-	<p class="vertical-text">{{crystal.verticalText}}</p>
-	<div class="column-2">
+	<p ref="vTextRef" class="vertical-text">{{crystal.verticalText}}</p>
+	<div ref="C2Ref" class="column-2">
 		<div @click="prev(1)"  class="hide-on-desktop prev" v-bind:style="'border-color:' + crystal.homeh1Color">
 		</div>
 		<div class="main">
@@ -60,7 +60,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 		</div>
 	</div> <!--function module to updates numbers, crystals and dots simultaneously-->	
 	<div @click="addItem" class="add-button hide-on-desktop" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
-	<div class="column-3">
+	<div ref="C3Ref" class="column-3">
 		<p class="hide-on-desktop">{{crystal.description}}</p>
 		<div class="hide-on-mobile  bullets">
 			<div class="bullet"></div>
@@ -79,86 +79,53 @@ var CrystalComponent = Vue.component("crystal-page", {
 	
 </section>
 	`,
-	// mounted: function() {
-	// 	console.log("right when the component is created");
-	// 	console.log( this.$refs.numberCrystRef );
-	// 	console.log( this.$refs.kaleidoImgsRef );
-	// 	let numberC2 = this.$refs.numberC2Ref;
-	// 	let imgC2 = this.$refs.imgC2Ref;
-	// 	let dotsC2 = this.$refs.dotsC2Ref;
+	mounted: function() {
+		console.log("right when the component is created");
+		console.log( this.$refs.numberCrystRef );
+		console.log( this.$refs.kaleidoImgsRef );
 
-	// 	let titleC1 = this.$refs.titleC1Ref;
-	// 	let title2C1 = this.$refs.titleTwoC1Ref;
-	// 	let chakraC1 = this.$refs.chakraC1Ref;
-	// 	let paraC1 = this.$refs.paraC1Ref;
+		let C1 = this.$refs.C1Ref;
+		let C2 = this.$refs.C2Ref;
+		let C3 = this.$refs.C3Ref;
+		let nav = this.$refs.navRef;
 
-	// 	let d1C3 = this.$refs.d1C3Ref;
-	// 	let d2C3 = this.$refs.d2C3Ref;
-	// 	let d3C3 = this.$refs.d3C3Ref;
-	// 	let d4C3 = this.$refs.d4C3Ref;
-	// 	let d5C3 = this.$refs.d5C3Ref;
+		// let titleC1 = this.$refs.titleC1Ref;
+		// let title2C1 = this.$refs.titleTwoC1Ref;
+		// let chakraC1 = this.$refs.chakraC1Ref;
+		// let paraC1 = this.$refs.paraC1Ref;
 
-	// 	let factsC3 = this.$refs.factsC3Ref;
+		// let d1C3 = this.$refs.d1C3Ref;
+		// let d2C3 = this.$refs.d2C3Ref;
+		// let d3C3 = this.$refs.d3C3Ref;
+		// let d4C3 = this.$refs.d4C3Ref;
+		// let d5C3 = this.$refs.d5C3Ref;
 
-	// 	let f1C3 = this.$refs.f1C3Ref;
-	// 	let f2C3 = this.$refs.f2C3Ref;
-	// 	let f3C3 = this.$refs.f3C3Ref;
-	// 	let f4C3 = this.$refs.f4C3Ref;
-	// 	let f5C3 = this.$refs.f5C3Ref;
+		// let factsC3 = this.$refs.factsC3Ref;
 
-	// 	let C1 = this.$refs.C1Ref;
-	// 	let C3 = this.$refs.C3Ref;
+		// let f1C3 = this.$refs.f1C3Ref;
+		// let f2C3 = this.$refs.f2C3Ref;
+		// let f3C3 = this.$refs.f3C3Ref;
+		// let f4C3 = this.$refs.f4C3Ref;
+		// let f5C3 = this.$refs.f5C3Ref;
 
-	// 	let logoC = this.$refs.logoCRef;
-	// 	let checkoutC = this.$refs.checkoutCRef;
-	// 	let addC = this.$refs.addCRef;
+		// let C1 = this.$refs.C1Ref;
+		// let C3 = this.$refs.C3Ref;
+
+		// let logoC = this.$refs.logoCRef;
+		// let checkoutC = this.$refs.checkoutCRef;
+		// let addC = this.$refs.addCRef;
 	
 		
 	
-	// 	let tl = new TimelineMax();
+		let tl = new TimelineMax();
 
-	// 	tl
-	// 		.from(numberC2, 0.3, {y:-15, autoAlpha:0, ease:Power1.easeOut}, '+=0.25')
-	// 		.from(imgC2, 0.8, {rotation: 220, transformOrigin: '50% 50%', y:-700, autoAlpha:0, ease:Power1.easeOut}, '+=0.15')
-	// 		.add('imgs-in')
-
-	// 		.from(titleC1, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'imgs-in')
-	// 		// .from(title2C1, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-	// 		// .from(chakraC1, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-	// 		// .from(paraC1, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-			
-	// 		.from(C1, 0.2, {x:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.2')
-	// 		.from(C3, 0.2, {x:15, autoAlpha:0, ease:Power1.easeOut},'-=0.1')
-
-	// 		// .from(factsC3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.35')
-
-	// 		// .from(d1C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-	// 		// .add('d1')
-	// 		// .from(d2C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-	// 		// .add('d2')
-	// 		// .from(d3C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-	// 		// .add('d3')
-	// 		// .from(d4C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-	// 		// .add('d4')
-	// 		// .from(d5C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-	// 		// .add('d5')
-
-	// 		// .from(f1C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'d1-=0.15')
-	// 		// .from(f2C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'d2-=0.15')
-	// 		// .from(f3C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'d3-=0.15')
-	// 		// .from(f4C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'d4-=0.15')
-	// 		// .from(f5C3, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'d5-=0.15')
-
-			
-			
-	// 		.from(logoC, 0.2, {x:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.50')
-	// 		.add('sides1')
-	// 		// .from(checkoutC, 0.2, {y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.2')
-	// 		.add('sides2')
-	// 		.from(dotsC2, 0.2, {y:15, autoAlpha:0, ease:Power1.easeOut},'sides2')
-	// 		.from(addC, 0.2, {y:15, autoAlpha:0, ease:Power1.easeOut},'sides2')
+		tl
+			.from(C1, 0.3, {y:15, autoAlpha:0, ease:Power1.easeOut}, '+=0.25')
+			.from(C2, 0.3, {y:15, autoAlpha:0, ease:Power1.easeOut}, '+=0.25')
+			.from(C3, 0.3, {y:15, autoAlpha:0, ease:Power1.easeOut}, '+=0.25')
+			.from(nav, 0.3, {y:-15, autoAlpha:0, ease:Power1.easeOut}, '+=0.25')
 	
-	// },
+	},
 	data: () => {
 		return {
 			crystalSlideshowActive: 0,

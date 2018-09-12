@@ -10,27 +10,6 @@ var HomeComponent = Vue.component("home", {
 		};
 	},
 	methods: {},
-	// mounted: function() {
-	// 	console.log("right when the component is created");
-	// 	console.log( document.querySelector('.home-text') );
-	// 	console.log( this.$refs.homeTextRef );
-	// 	console.log( this.$refs.kaleidoImgsRef );
-	// 	let kaliedo = this.$refs.kaleidoImgsRef;
-	// 	let checkout = this.$refs.checkoutRef;
-	// 	let titles = this.$refs.titlesRef;
-	// 	let logo = this.$refs.logoRef;
-	// 	let homeText = this.$refs.homeTextRef;
-
-
-	// 	let tl = new TimelineMax();
-	// 	tl
-	// 		.from(titles, 0.3, {y:-15, autoAlpha:0, ease:Power1.easeOut}, '+=0.25')
-	// 		.from(kaliedo, 0.8, {rotation: 720, transformOrigin: '50% 50%', x:-700, autoAlpha:0, ease:Power1.easeOut}, '+=0.15')
-	// 		.from(homeText, 0.2, {y:-15, autoAlpha:0, ease:Power1.easeOut})
-	// 		.from(logo, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.25')
-	// 		.from(checkout, 0.1, {y:-15, autoAlpha:0, ease:Power1.easeOut},'+=0.15')
-
-	// },
 	watch: {
 		chosenCrystal: function chosenCrystal() {
 			this.kaleidoscope.image.src = this.crystals[this.chosenCrystal].homeKaleidoscope;
@@ -38,6 +17,15 @@ var HomeComponent = Vue.component("home", {
 	},
 	mounted: function mounted() {
 		this.kaleidoscope = makeKaleidoscope(this.$refs.kaleidoscopeholder);
+		console.log("right when the component is created");
+		console.log(document.querySelector('.home-text'));
+		console.log(this.$refs.homeTextRef);
+		var titles = this.$refs.titlesRef;
+		var logo = this.$refs.logoRef;
+		var homeText = this.$refs.homeTextRef;
+
+		var tl = new TimelineMax();
+		tl.from(titles, 0.5, { y: 15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.25').from(homeText, 0.3, { y: 15, autoAlpha: 0, ease: Power1.easeOut }).from(logo, 0.3, { x: -15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.25').from(checkout, 0.1, { y: 15, autoAlpha: 0, ease: Power1.easeOut }, '+=0.15');
 	}
 });
 //# sourceMappingURL=HomeComponent.js.map

@@ -522,6 +522,7 @@ table {
 }
 
 .add-button {
+	cursor: pointer;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -639,6 +640,7 @@ table {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	transition: all 0.3s ease;
 }
 
 .column-2 .numbers {
@@ -821,7 +823,13 @@ body.cbp-spmenu-push {
 }
 
 body.cbp-spmenu-push-toleft {
-	left: -80%;
+	left: -40%;
+}
+
+@media screen and (max-width: 1023px) {
+	body.cbp-spmenu-push-toleft {
+		width: -80%;
+	}
 }
 
 @media screen and (min-width: 1023px) {
@@ -940,7 +948,7 @@ nav .circle {
 
 .cart-component-container .bag-icon {
 	position: absolute;
-	top: 5%;
+	top: 2em;
 	right: 5%;
 	cursor: pointer;
 }
@@ -962,14 +970,26 @@ nav .circle {
 
 .cart-component-container .cart-container.cbp-spmenu-vertical {
 	position: fixed;
-	width: 80%;
+	width: 40%;
 	height: 100%;
 	top: 0;
 	z-index: 1000;
 }
 
+@media screen and (max-width: 1023px) {
+	.cart-component-container .cart-container.cbp-spmenu-vertical {
+		width: 80%;
+	}
+}
+
 .cart-component-container .cart-container.cbp-spmenu-right {
-	right: -80%;
+	right: -40%;
+}
+
+@media screen and (max-width: 1023px) {
+	.cart-component-container .cart-container.cbp-spmenu-right {
+		width: -80%;
+	}
 }
 
 .cart-component-container .cart-container.cbp-spmenu-open {
@@ -1004,7 +1024,7 @@ nav .circle {
 
 .cart-component-container .cart-container .cart-main ul li {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin-bottom: 20px;
 	font-size: 1.5em;
 	font-weight: 100;
@@ -1036,6 +1056,7 @@ nav .circle {
 }
 
 .cart-component-container .cart-container .cart-footer .button-container .view-cart-btn {
+	cursor: pointer;
 	font-family: "bernhard-gothic-urw", sans-serif;
 	font-size: 1em;
 	padding: .8em 1.2em;
@@ -1044,6 +1065,7 @@ nav .circle {
 }
 
 .cart-component-container .cart-container .cart-footer .button-container .checkout-btn {
+	cursor: pointer;
 	font-family: "bernhard-gothic-urw", sans-serif;
 	font-size: 1em;
 	padding: .8em 1.2em;
