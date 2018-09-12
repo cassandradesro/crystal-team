@@ -37,7 +37,7 @@ let crystals = {
 		],
 		
 		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png',
-		price: "$30",
+		price: "$30.00",
 
 	},
 	amethyst: {
@@ -73,7 +73,7 @@ let crystals = {
 		],
 		
 		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png',
-		price: "$30",
+		price: "$30.00",
 
 	},
 	citrine: {
@@ -109,7 +109,7 @@ let crystals = {
 		],
 	
 		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png',
-		price: "$30",
+		price: "$30.00",
 },
 
 	jasper: {
@@ -148,7 +148,7 @@ let crystals = {
 		],
 		
 		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
-		price: "$30",
+		price: "$30.00",
 
 	},
 	greenfluorite: {
@@ -184,7 +184,7 @@ let crystals = {
 		],
 		
 		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png',
-		price: "$30",
+		price: "$30.00",
 
 	},
 
@@ -222,7 +222,7 @@ let crystals = {
 		],
 	
 		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png',
-		price: "$30",}
+		price: "$30.00",}
 
 }
 
@@ -247,5 +247,20 @@ var app = new Vue({
 		cart: [],
 		showCart: false,
 		facts: ''
+	},
+	methods: {
+		addingItemToCart: function(item) {
+			console.log("app.js addingItemToCart", item)
+			let existingItem = this.cart.find(function(cartItem){
+				return cartItem.selectedCrystalName == item.selectedCrystalName
+			}) 
+			if (existingItem) {
+				existingItem.selectedCrystalCount++;
+			} else {
+				this.cart.push(item);
+			}
+
+			//item.selectedCrystalName){}
+		}
 	}
 })

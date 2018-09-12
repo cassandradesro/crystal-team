@@ -1,6 +1,5 @@
-console.log()
 var CrystalComponent = Vue.component("crystal-page", {
-	props: ['crystal', 'cart'],
+	props: ['crystal'],
 	template: `
 
 	<section class="page" v-bind:style="{ backgroundColor: crystal.backgroundColor, backgroundImage: crystal.backgroundTexture }">
@@ -48,7 +47,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 			<div class="numbers">
 				<img v-for="(numberImage, index) in crystal.numberImages"  v-if="index == crystalSlideshowActive" v-bind:src="numberImage" alt="number one">
 				<div class="crystals">
-					<img v-for="(crystalImage, index) in crystal.crystalImages" v-if="index == crystalSlideshowActive" v-bind:src="crystalImage" alt="crystal">
+					<img class="cryImg" v-for="(crystalImage, index) in crystal.crystalImages" v-if="index == crystalSlideshowActive" v-bind:src="crystalImage" alt="crystal">
 				</div>
 			</div>
 			
@@ -60,7 +59,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 		<div @click="next(1)" class="hide-on-desktop next" v-bind:style="'border-color:' + crystal.homeh1Color">
 		</div>
 	</div> <!--function module to updates numbers, crystals and dots simultaneously-->	
-	<div class="add-button hide-on-desktop" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
+	<div @click="addItem" class="add-button hide-on-desktop" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
 	<div class="column-3">
 		<p class="hide-on-desktop">{{crystal.description}}</p>
 		<div class="hide-on-mobile  bullets">
@@ -201,7 +200,16 @@ var CrystalComponent = Vue.component("crystal-page", {
     		}
 		},
 		addItem(){
+			let selectedItem = {
+				selectedCrystalName: this.crystal.title + " #" + ((this.crystalSlideshowActive)+(1)), 
+				selectedCrystal: this.crystal.crystalImages[ this.crystalSlideshowActive ],
+				selectedPrice: this.crystal.price,
+				selectedCrystalCount: 1
+			}
+			// console.log('selectedItem', selectedItem)
 			
+			console.log('selected crystal & price: ', selectedItem)
+			this.$emit('additemtocart', selectedItem)
 		}
 	}
 })

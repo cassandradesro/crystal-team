@@ -21,7 +21,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png',
-		price: "$30"
+		price: "$30.00"
 
 	},
 	amethyst: {
@@ -41,7 +41,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png',
-		price: "$30"
+		price: "$30.00"
 
 	},
 	citrine: {
@@ -61,7 +61,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png',
-		price: "$30"
+		price: "$30.00"
 	},
 
 	jasper: {
@@ -84,7 +84,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
-		price: "$30"
+		price: "$30.00"
 
 	},
 	greenfluorite: {
@@ -104,7 +104,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/green-kaleidoscope.png',
-		price: "$30"
+		price: "$30.00"
 
 	},
 
@@ -125,7 +125,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png',
-		price: "$30" }
+		price: "$30.00" }
 
 };
 
@@ -142,6 +142,21 @@ var app = new Vue({
 		cart: [],
 		showCart: false,
 		facts: ''
+	},
+	methods: {
+		addingItemToCart: function addingItemToCart(item) {
+			console.log("app.js addingItemToCart", item);
+			var existingItem = this.cart.find(function (cartItem) {
+				return cartItem.selectedCrystalName == item.selectedCrystalName;
+			});
+			if (existingItem) {
+				existingItem.selectedCrystalCount++;
+			} else {
+				this.cart.push(item);
+			}
+
+			//item.selectedCrystalName){}
+		}
 	}
 });
 //# sourceMappingURL=app.js.map

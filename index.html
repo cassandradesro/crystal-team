@@ -18,7 +18,7 @@
 		<div id="app">
 			
 			<cart :cart="cart"></cart>
-			<router-view></router-view>
+			<router-view @additemtocart="addingItemToCart"></router-view>
 
 		</div>
 

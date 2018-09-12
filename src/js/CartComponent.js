@@ -11,10 +11,15 @@ var CartComponent = Vue.component("cart", {
 			</div>
 			<div class="cart-main">
 				<ul class="cart-items">
-					<li>cart item</li>
-					<li>cart item</li>
-					<li>cart item</li>
-					<li>cart item</li>
+					<li v-for="item in cart">
+
+						<img :src="item.selectedCrystal"></img>
+						<div class="itemText">
+							<p class="name">{{item.selectedCrystalName}}</p>
+							<p class="price">{{item.selectedCrystalCount}} x {{item.selectedPrice}}</p>
+						</div>
+						
+					</li>
 				</ul>
 			</div>
 			<div class="cart-footer">
