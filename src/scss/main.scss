@@ -94,14 +94,18 @@ nav{
 	flex-direction: row;
 	justify-content: space-around;
 	border-bottom: 3px solid #fff;
+	
 	@media screen and (max-width: $tablet-and-below){
 		position: unset;
 		transform: translateX(0);
 		width: 100%;
 		top: unset;
 		left: unset;
-		margin-bottom: 50px;
 		border-bottom: 2px solid #fff;
+		margin: 40px auto;
+	}
+	@media screen and (min-width: 768px){
+		margin: 0px auto;
 	}
 	
 	.circle{
@@ -168,7 +172,7 @@ nav{
 	img{
 		position: absolute;
 		top: 10px;
-		left: 10px;
+		// left: 10px;
 		z-index: 10000;
 		cursor: pointer;
 	}

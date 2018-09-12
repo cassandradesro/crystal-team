@@ -175,7 +175,7 @@ var CrystalComponent = Vue.component("crystal-page", {
 			if (this.crystalSlideshowActive > this.crystal.crystalImages.length - 1){
 				this.crystalSlideshowActive = 0;
 			}
-		}, 8000)
+		}, 3000)
 
 	},
 	methods: {
