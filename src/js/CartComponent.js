@@ -2,7 +2,7 @@ var CartComponent = Vue.component("cart", {
 	template: `
 	<div class="cart-component-container">
 
-		<img v-if="$route.path == '/'" @click="cartToggle" ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/bag-grey.png" alt="shopping bag icon">
+		<img v-if="$route.path == '/'" @click="cartToggle" ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/home/bagPurple.png" alt="shopping bag icon">
 		<img v-else @click="cartToggle" ref="checkoutCRef" class="bag-icon" id="showRightPush" src="dist/img/bag.png" alt="shopping bag icon">
 
 		<div :class="'cart-container cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right' + (show ? ' cbp-spmenu-open' : '') ">

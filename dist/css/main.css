@@ -26,8 +26,8 @@ nav {
 
 .crystal-titles {
 	font-size: 3.6em;
-	margin: 120px auto;
-	margin-bottom: 80px;
+	padding-top: 120px;
+	margin: 0 auto 80px auto;
 	width: 77%;
 	white-space: nowrap;
 	color: #d74b62;
@@ -99,7 +99,7 @@ h3.healing-crystals {
 	padding-bottom: 40px;
 }
 
-.checkout {
+.bag-icon {
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -522,6 +522,7 @@ table {
 }
 
 .add-button {
+	cursor: pointer;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -860,6 +861,22 @@ body {
 	text-rendering: auto;
 }
 
+body.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+body.cbp-spmenu-push-toleft {
+	left: -40%;
+}
+
+@media screen and (max-width: 1023px) {
+	body.cbp-spmenu-push-toleft {
+		width: -80%;
+	}
+}
+
 @media screen and (min-width: 1023px) {
 	.hide-on-desktop {
 		display: none;
@@ -968,70 +985,144 @@ nav .circle {
 	background-color: #444444;
 }
 
-.cart-component-container {
-	position: absolute;
-	/* Transitions */
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+	transition: all 0.3s ease;
 }
 
-.cart-component-container img {
+.cart-component-container {
 	position: absolute;
-	top: 10px;
+	z-index: 10000;
+	width: 100%;
+}
+
+.cart-component-container .bag-icon {
+	position: absolute;
+	top: 2em;
+	right: 5%;
 	z-index: 10000;
 	cursor: pointer;
 }
 
-.cart-component-container .cbp-spmenu-right {
-	right: -240px;
-}
-
-.cart-component-container .cbp-spmenu-right.cbp-spmenu-open {
-	right: 0px;
-}
-
-.cart-component-container .cbp-spmenu,
-.cart-component-container .cbp-spmenu-push {
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+@media screen and (max-width: 1023px) {
+	.cart-component-container .bag-icon {
+		top: 10px;
+		right: 10px;
+	}
 }
 
 .cart-component-container .cart-container {
 	font-family: "Rakkas", cursive;
-	position: fixed;
-	width: 240px;
-	height: 100%;
-	top: 0;
-	z-index: 1000;
 	right: 0;
 	display: flex;
 	flex-direction: column;
+	font-family: "bernhard-gothic-urw", sans-serif;
+}
+
+.cart-component-container .cart-container.cbp-spmenu-vertical {
+	position: fixed;
+	width: 40%;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+@media screen and (max-width: 1023px) {
+	.cart-component-container .cart-container.cbp-spmenu-vertical {
+		width: 80%;
+	}
+}
+
+.cart-component-container .cart-container.cbp-spmenu-right {
+	right: -40%;
+}
+
+@media screen and (max-width: 1023px) {
+	.cart-component-container .cart-container.cbp-spmenu-right {
+		width: -80%;
+	}
+}
+
+.cart-component-container .cart-container.cbp-spmenu-open {
+	right: 0px;
 }
 
 .cart-component-container .cart-container .cart-header {
-	background-color: pink;
+	margin-top: 2em;
 	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cart-component-container .cart-container .cart-header h3 {
+	font-family: "bernhard-gothic-urw", sans-serif;
+	font-size: 2em;
+	color: #727272;
 }
 
 .cart-component-container .cart-container .cart-main {
 	background-color: white;
-	flex-grow: 4;
+	flex-grow: 6;
 	display: flex;
 	justify-content: center;
 }
 
 .cart-component-container .cart-container .cart-main ul {
+	width: 80%;
 	padding-top: 20px;
 }
 
 .cart-component-container .cart-container .cart-main ul li {
+	display: flex;
+	justify-content: space-evenly;
 	margin-bottom: 20px;
 	font-size: 1.5em;
 	font-weight: 100;
+	height: 20%;
+}
+
+.cart-component-container .cart-container .cart-main ul li img {
+	height: 60%;
+}
+
+.cart-component-container .cart-container .cart-main ul li .itemText {
+	margin-top: 1em;
+}
+
+.cart-component-container .cart-container .cart-main ul li .itemText .name {
+	margin: 0;
+}
+
+.cart-component-container .cart-container .cart-main ul li .itemText .price {
+	font-size: .5em;
+	margin: 0;
 }
 
 .cart-component-container .cart-container .cart-footer {
-	background-color: orange;
-	flex-grow: 1;
+	flex-grow: 0;
+	padding: 2em 1em;
+	display: flex;
+	justify-content: space-around;
+}
+
+.cart-component-container .cart-container .cart-footer .button-container .view-cart-btn {
+	cursor: pointer;
+	font-family: "bernhard-gothic-urw", sans-serif;
+	font-size: 1em;
+	padding: .8em 1.2em;
+	background-color: #727272;
+	color: #fff;
+}
+
+.cart-component-container .cart-container .cart-footer .button-container .checkout-btn {
+	cursor: pointer;
+	font-family: "bernhard-gothic-urw", sans-serif;
+	font-size: 1em;
+	padding: .8em 1.2em;
+	color: #727272;
+	border: #727272 solid 1px;
 }
 
 /*# sourceMappingURL=main.css.map */
