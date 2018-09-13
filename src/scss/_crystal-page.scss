@@ -101,6 +101,8 @@
 		margin-bottom: 20px;
 		@media screen and (max-width: 767px){
 			margin-top: 30px;
+			white-space: nowrap;
+			font-size: 3rem;
 		}
 		
 		margin-top: 70px;
@@ -276,12 +278,22 @@
 	height: 10px;
 	background-color: #fff;
 	border-radius: 50%;
-	margin: 14.5px 0;
+	
 	@media screen and (max-width: $tablet-and-below){
 		width: 4%;
 		height: 0;
 		padding-bottom: 4%;
 		margin-right: 22px;
+	}
+	@media screen and (min-width: 768px){
+		margin: 13.5px 0;
+		margin-right: 22px;
+	}
+	@media screen and (min-width: 1024px){
+		margin-right: 0px;
+	}
+	@media screen and (min-width: 1224px){
+		margin: 14.5px 0;
 	}
 
 }
@@ -291,7 +303,6 @@
 	margin: -6px;
 	
 	.fact{
-		font-size: 18px;
 		margin-top: 20px;
 		white-space: nowrap;
 		@media screen and (max-width: $tablet-and-below){
@@ -304,6 +315,12 @@
 			width: 100%;
 			min-width: 253px;
 			max-width: 301px;
+		}
+		@media screen and (min-width: 1024px){
+			font-size: 16px;
+		}
+		@media screen and (min-width: 1224px){
+			font-size: 18px;
 		}
 	}
 	@media screen and (max-width: $tablet-and-below){

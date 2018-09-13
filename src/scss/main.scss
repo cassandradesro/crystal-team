@@ -106,6 +106,7 @@ nav{
 	flex-direction: row;
 	justify-content: space-around;
 	border-bottom: 3px solid #fff;
+	transform: matrix(1, 0, 0, 1, 0, 0);
 	
 	@media screen and (max-width: $tablet-and-below){
 		position: unset;
@@ -115,6 +116,7 @@ nav{
 		left: unset;
 		border-bottom: 2px solid #fff;
 		margin: 40px auto;
+		transform: matrix(1, 0, 0, 1, 0, 0);
 	}
 	@media screen and (min-width: 768px){
 		margin: 0px auto;
@@ -235,7 +237,7 @@ nav{
 		font-family: $text-font;
 
 		.cart-header{
-			@media screen and (max-width: 767px){
+			@media screen and (max-width: 1023px){
 				background-color: #fff;
 				margin-top: 4em;
 			}

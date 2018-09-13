@@ -577,6 +577,8 @@ table {
 @media screen and (max-width: 767px) {
 	.column-1 h1 {
 		margin-top: 30px;
+		white-space: nowrap;
+		font-size: 3rem;
 	}
 }
 
@@ -787,7 +789,6 @@ table {
 	height: 10px;
 	background-color: #fff;
 	border-radius: 50%;
-	margin: 14.5px 0;
 }
 
 @media screen and (max-width: 1023px) {
@@ -799,6 +800,25 @@ table {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.bullet {
+		margin: 13.5px 0;
+		margin-right: 22px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.bullet {
+		margin-right: 0px;
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.bullet {
+		margin: 14.5px 0;
+	}
+}
+
 .facts {
 	border-left: 2px solid #fff;
 	padding: 0 20px;
@@ -806,7 +826,6 @@ table {
 }
 
 .facts .fact {
-	font-size: 18px;
 	margin-top: 20px;
 	white-space: nowrap;
 }
@@ -822,6 +841,18 @@ table {
 		width: 100%;
 		min-width: 253px;
 		max-width: 301px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.facts .fact {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.facts .fact {
+		font-size: 18px;
 	}
 }
 
@@ -900,6 +931,7 @@ nav {
 	flex-direction: row;
 	justify-content: space-around;
 	border-bottom: 3px solid #fff;
+	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 @media screen and (max-width: 1023px) {
@@ -911,6 +943,7 @@ nav {
 		left: unset;
 		border-bottom: 2px solid #fff;
 		margin: 40px auto;
+		transform: matrix(1, 0, 0, 1, 0, 0);
 	}
 }
 
@@ -1055,7 +1088,7 @@ nav .circle {
 	align-items: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 	.cart-component-container .cart-container .cart-header {
 		background-color: #fff;
 		margin-top: 4em;
