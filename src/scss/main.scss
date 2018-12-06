@@ -65,18 +65,18 @@ $text-font: "bernhard-gothic-urw",sans-serif;
 	box-sizing: border-box;
 }
 
-@keyframes fade-in {
-	0%   { opacity: 0; }
-	10% { opacity: 1; }
-	90% { opacity: 1; }
-	100%   { opacity: 0; }
+// @keyframes fade-in {
+// 	0%   { opacity: 0; }
+// 	10% { opacity: 1; }
+// 	90% { opacity: 1; }
+// 	100%   { opacity: 0; }
 	
-}
-.fade-in{
-	opacity: 0;
-	animation-name: fade-in;
-	animation-duration: 5s; 	 
-}
+// }
+// .fade-in{
+// 	opacity: 0;
+// 	animation-name: fade-in;
+// 	animation-duration: 5s; 	 
+// }
 body {
 	background: #fff;
 
@@ -125,6 +125,84 @@ nav{
 		justify-content: flex-start;
 		flex: 1;
 		flex-wrap: wrap;
+
+
+		.circle {
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			overflow: hidden;
+			&:before {
+				content: " ";
+				display: block;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				background: red; // replace this color with the right ones using nth-child below
+			}
+			&:hover {
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+
+		&:nth-child(1) {
+			// the first dot -- home
+			.circle {
+				&:before {
+					background: #fff;
+				}
+			}
+		}
+		&:nth-child(2) {
+			// the second dot -- amethyst
+			.circle {
+				&:before {
+					background: $text-purple;
+				}
+			}
+		}
+		&:nth-child(3) {
+			// the third dot -- citrine
+			.circle {
+				&:before {
+					background: $background-orange;
+				}
+			}
+		}
+		&:nth-child(4) {
+			// the fourth dot -- jasper
+			.circle {
+				&:before {
+					background: $red-text;
+				}
+			}
+		}&:nth-child(5) {
+			// the fifth dot -- green fluorite
+			.circle {
+				&:before {
+					background: $green-text;
+				}
+			}
+		}&:nth-child(6) {
+			// the sixth dot -- rose quarts
+			.circle {
+				&:before {
+					background: $pink-text;
+				}
+			}
+		}
+		&:nth-child(7) {
+			// the seventh dot -- hematite
+			.circle {
+				&:before {
+					background: $hematite-text;
+				}
+			}
+		}
 		p{
 			opacity: 0;
 			text-align: center;
@@ -134,8 +212,7 @@ nav{
 			p{
 				opacity: 1;
 			}
-		}
-		
+		}	
 	}
 	@media screen and (max-width: $tablet-and-below){
 		// position: unset;
@@ -147,15 +224,6 @@ nav{
 	}
 	@media screen and (min-width: 768px){
 		// margin: 0px auto;
-	}
-	
-	.circle{
-		display: block;
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		background-color: transparent;
-		border: 3px solid #fff;
 	}
 	
 	

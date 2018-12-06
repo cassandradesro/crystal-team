@@ -186,6 +186,7 @@
 		left: -27%;
 		top: 70px;
 		transition: .3s;
+		pointer-events: none;
 		@media screen and (max-width: $tablet-and-below){
 			width: 65%;
     		left: 0%;
@@ -217,18 +218,21 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		z-index: 10;
+		position: relative;
 		div {
 			width: 15px;
 			height: 15px;
 			border-radius: 50%;
 			background-color: #fff;
 			margin-right: 20px;
-			transition: .3s;
 			&:last-child{
 				margin-right: 0px;
 			}
 			&.active{
 				border: 3px solid $text-purple;
+				transition: .5s;
+
 				
 			}
 

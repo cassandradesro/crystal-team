@@ -6,37 +6,37 @@ var CrystalComponent = Vue.component("crystal-page", {
 	<nav ref="navRef">
 		<div>
 		
-			<router-link to="/"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<router-link to="/"><span class="circle"></span></router-link>
 			<p>home</p>
 		</div>
 		
 		<div>
-			<router-link to="/amethyst"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<router-link to="/amethyst"><span class="circle"></span></router-link>
 			<p>amethyst</p>
 		</div>
 		
 		<div>
-			<router-link to="/citrine"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<router-link to="/citrine"><span class="circle"></span></router-link>
 			<p>citrine</p>
 		</div>
 		
 		<div>
-			<router-link to="/jasper"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<router-link to="/jasper"><span class="circle"></span></router-link>
 			<p>jasper</p>
 		</div>
 		
 		<div>
-			<router-link to="/greenfluorite"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)"class="circle"></span></router-link>
+			<router-link to="/greenfluorite"><span class="circle"></span></router-link>
 			<p>green fluorite</p>
 		</div>
 		
 		<div>
-			<router-link to="/rosequartz"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<router-link to="/rosequartz"><span class="circle"></span></router-link>
 			<p>rose quartz</p>
 		</div>
 		
 		<div>
-			<router-link to="/hematite"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<router-link to="/hematite"><span class="circle"></span></router-link>
 			<p>hematite</p>
 		</div>
 	</nav>
@@ -159,52 +159,59 @@ var CrystalComponent = Vue.component("crystal-page", {
 		// if (window.innerWidth < 768) return; //this code prevents the function from running on mobile
 		this.intervalID = setInterval(() => {
 			console.log("slide changed:" )
-			this.crystalSlideshowActive ++;
-			if (this.crystalSlideshowActive > this.crystal.crystalImages.length - 1){
-				this.crystalSlideshowActive = 0;
-			}
+			let tl = new TimelineMax()
+				tl.to(".fade-in", 1, {opacity: 0})
+				tl.call(() => {
+					this.crystalSlideshowActive ++;
+					if (this.crystalSlideshowActive > this.crystal.crystalImages.length - 1){
+						this.crystalSlideshowActive = 0;
+					}
+				})
+				tl.to(".fade-in", 1, {opacity: 1}) 
 		}, 5500)
 
 	},
-	computed: {
-		styleObject() {
-		  	if (this.hoverState){
-				console.log("hoveractivated");
-				return {
-					backgroundColor: this.crystal.homeh1Color,
-				};
-			}
-		}
-	},
+	
 	methods: {
-		updateHoverState(isHover) {
-			this.hoverState = isHover;
-			
-		},
 
 	    jump(index) {
 			console.log("jump: ", index)
 				clearInterval(this.intervalID)
-	      		this.crystalSlideshowActive = index;
-			
+				let tl = new TimelineMax()
+				tl.to(".fade-in", 0.5, {opacity: 0})
+				tl.call(() => {
+					this.crystalSlideshowActive = index;
+				})
+				tl.to(".fade-in", 0.5, {opacity: 1}) 
+				
 	    	
 
 	    },
 	    next(amount){
 	    	console.log("next")
-	    	clearInterval(this.intervalID)
-	    	this.crystalSlideshowActive ++;
-    		if (this.crystalSlideshowActive > this.crystal.crystalImages.length - 1){
-    			this.crystalSlideshowActive = 0;
-    		}
+			clearInterval(this.intervalID)
+			let tl = new TimelineMax()
+			tl.to(".fade-in", .5, {opacity: 0})
+			tl.call(() => {
+				this.crystalSlideshowActive ++;
+    			if (this.crystalSlideshowActive > this.crystal.crystalImages.length - 1){
+    				this.crystalSlideshowActive = 0;
+    			}
+			})
+			tl.to(".fade-in", .5, {opacity: 1})
 	    },
 	    prev(amount){
 	    	console.log("prev")
-	    	clearInterval(this.intervalID)
-	    	this.crystalSlideshowActive --;
-    		if (this.crystalSlideshowActive < 0){
-    			this.crystalSlideshowActive = this.crystal.crystalImages.length - 1;
-    		}
+			clearInterval(this.intervalID)
+			let tl = new TimelineMax()
+			tl.to(".fade-in", .5, {opacity: 0})
+			tl.call(() => {
+				this.crystalSlideshowActive --;
+				if (this.crystalSlideshowActive < 0){
+					this.crystalSlideshowActive = this.crystal.crystalImages.length - 1;
+				}
+			})
+			tl.to(".fade-in", .5, {opacity: 1})
 		},
 		addItem(){
 			let selectedItem = {

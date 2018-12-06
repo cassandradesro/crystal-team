@@ -21,7 +21,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png',
-		price: "$30.00"
+		price: "$20.00"
 
 	},
 	amethyst: {
@@ -41,7 +41,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png',
-		price: "$30.00"
+		price: "$32.00"
 
 	},
 	citrine: {
@@ -61,7 +61,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png',
-		price: "$30.00"
+		price: "$34.00"
 	},
 
 	jasper: {
@@ -84,7 +84,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
-		price: "$30.00"
+		price: "$31.00"
 
 	},
 	greenfluorite: {
@@ -125,7 +125,7 @@ var crystals = {
 		numberImages: ['dist/img/numbers/number-1.png', 'dist/img/numbers/number-2.png', 'dist/img/numbers/number-3.png', 'dist/img/numbers/number-4.png'],
 
 		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png',
-		price: "$30.00" }
+		price: "$26.00" }
 
 };
 

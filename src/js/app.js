@@ -37,7 +37,7 @@ let crystals = {
 		],
 		
 		homeKaleidoscope: 'dist/img/home/rose-kaleidoscope.png',
-		price: "$30.00",
+		price: "$20.00",
 
 	},
 	amethyst: {
@@ -73,7 +73,7 @@ let crystals = {
 		],
 		
 		homeKaleidoscope: 'dist/img/home/purple-kaleidoscope.png',
-		price: "$30.00",
+		price: "$32.00",
 
 	},
 	citrine: {
@@ -109,7 +109,7 @@ let crystals = {
 		],
 	
 		homeKaleidoscope: 'dist/img/home/citrine-kaleidoscope.png',
-		price: "$30.00",
+		price: "$34.00",
 },
 
 	jasper: {
@@ -148,7 +148,7 @@ let crystals = {
 		],
 		
 		homeKaleidoscope: 'dist/img/home/red-kaleidoscope.png',
-		price: "$30.00",
+		price: "$31.00",
 
 	},
 	greenfluorite: {
@@ -222,7 +222,7 @@ let crystals = {
 		],
 	
 		homeKaleidoscope: 'dist/img/home/black-kaleidoscope.png',
-		price: "$30.00",}
+		price: "$26.00",}
 
 }
 

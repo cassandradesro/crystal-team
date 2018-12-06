@@ -680,6 +680,7 @@ table {
 	left: -27%;
 	top: 70px;
 	transition: .3s;
+	pointer-events: none;
 }
 
 @media screen and (max-width: 1023px) {
@@ -718,6 +719,8 @@ table {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	z-index: 10;
+	position: relative;
 }
 
 .column-2 .dots div {
@@ -726,7 +729,6 @@ table {
 	border-radius: 50%;
 	background-color: #fff;
 	margin-right: 20px;
-	transition: .3s;
 }
 
 .column-2 .dots div:last-child {
@@ -735,6 +737,7 @@ table {
 
 .column-2 .dots div.active {
 	border: 3px solid #4b365a;
+	transition: .5s;
 }
 
 @media screen and (max-width: 1023px) {
@@ -841,27 +844,6 @@ h6 {
 	box-sizing: border-box;
 }
 
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-.fade-in {
-	opacity: 0;
-	animation-name: fade-in;
-	animation-duration: 5s;
-}
-
 body {
 	background: #fff;
 	-webkit-font-smoothing: antialiased;
@@ -914,6 +896,56 @@ nav div {
 	flex-wrap: wrap;
 }
 
+nav div .circle {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	overflow: hidden;
+}
+
+nav div .circle:before {
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: red;
+}
+
+nav div .circle:hover:before {
+	opacity: 1;
+}
+
+nav div:nth-child(1) .circle:before {
+	background: #fff;
+}
+
+nav div:nth-child(2) .circle:before {
+	background: #4b365a;
+}
+
+nav div:nth-child(3) .circle:before {
+	background: #d77008;
+}
+
+nav div:nth-child(4) .circle:before {
+	background: #901b00;
+}
+
+nav div:nth-child(5) .circle:before {
+	background: #256d4b;
+}
+
+nav div:nth-child(6) .circle:before {
+	background: #d74b62;
+}
+
+nav div:nth-child(7) .circle:before {
+	background: #444444;
+}
+
 nav div p {
 	opacity: 0;
 	text-align: center;
@@ -922,15 +954,6 @@ nav div p {
 
 nav div:hover p {
 	opacity: 1;
-}
-
-nav .circle {
-	display: block;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background-color: transparent;
-	border: 3px solid #fff;
 }
 
 /* Transitions */
