@@ -4,41 +4,48 @@ var CrystalComponent = Vue.component("crystal-page", {
 
 	<section class="page" v-bind:style="{ backgroundColor: crystal.backgroundColor, backgroundImage: crystal.backgroundTexture }">
 	<nav ref="navRef">
-		<div>
+			<router-link to="/">
+				<span class="circle"></span>
+				<p>home</p>
+			</router-link>
 		
-			<router-link to="/"><span class="circle"></span></router-link>
-			<p>home</p>
-		</div>
+			<router-link to="/amethyst">
+				<span class="circle"></span>
+				<p>amethyst</p>
+
+			</router-link>
 		
-		<div>
-			<router-link to="/amethyst"><span class="circle"></span></router-link>
-			<p>amethyst</p>
-		</div>
+			<router-link to="/citrine">
+				<span class="circle"></span>
+				<p>citrine</p>	
+			</router-link>
 		
-		<div>
-			<router-link to="/citrine"><span class="circle"></span></router-link>
-			<p>citrine</p>
-		</div>
 		
-		<div>
-			<router-link to="/jasper"><span class="circle"></span></router-link>
-			<p>jasper</p>
-		</div>
+			<router-link to="/jasper">
+				<span class="circle"></span>
+				<p>jasper</p>
+			</router-link>
 		
-		<div>
-			<router-link to="/greenfluorite"><span class="circle"></span></router-link>
-			<p>green fluorite</p>
-		</div>
 		
-		<div>
-			<router-link to="/rosequartz"><span class="circle"></span></router-link>
-			<p>rose quartz</p>
-		</div>
+			<router-link to="/greenfluorite">
+				<span class="circle"></span>
+				<p>green fluorite</p>
+
+			</router-link>
 		
-		<div>
-			<router-link to="/hematite"><span class="circle"></span></router-link>
-			<p>hematite</p>
-		</div>
+		
+			<router-link to="/rosequartz">
+				<span class="circle"></span>
+				<p>rose quartz</p>
+
+			</router-link>
+		
+		
+			<router-link to="/hematite">
+				<span class="circle"></span>
+				<p>hematite</p>
+			</router-link>
+		
 	</nav>
 	<div ref="C1Ref" class="column-1">
 		<h1 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.title}}</h1>
@@ -160,14 +167,14 @@ var CrystalComponent = Vue.component("crystal-page", {
 		this.intervalID = setInterval(() => {
 			console.log("slide changed:" )
 			let tl = new TimelineMax()
-				tl.to(".fade-in", 1, {opacity: 0})
+				tl.to(".fade-in", .5, {opacity: 0})
 				tl.call(() => {
 					this.crystalSlideshowActive ++;
 					if (this.crystalSlideshowActive > this.crystal.crystalImages.length - 1){
 						this.crystalSlideshowActive = 0;
 					}
 				})
-				tl.to(".fade-in", 1, {opacity: 1}) 
+				tl.to(".fade-in", .5, {opacity: 1}) 
 		}, 5500)
 
 	},

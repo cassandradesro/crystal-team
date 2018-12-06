@@ -72,11 +72,11 @@ $text-font: "bernhard-gothic-urw",sans-serif;
 // 	100%   { opacity: 0; }
 	
 // }
-// .fade-in{
-// 	opacity: 0;
-// 	animation-name: fade-in;
-// 	animation-duration: 5s; 	 
-// }
+.fade-in{
+	// opacity: 0;
+	// animation-name: fade-in;
+	// animation-duration: 5s; 	 
+}
 body {
 	background: #fff;
 
@@ -118,13 +118,25 @@ nav{
 	flex-direction: row;
 	justify-content: center;;
 	
-	div{
+	a{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
 		flex: 1;
 		flex-wrap: wrap;
+		text-decoration: none;
+		color: #fff;
+		&:hover {
+			.circle{
+				&:before {
+					opacity: 1;
+				}
+			}
+			p{
+				opacity: 1;
+			}
+		}
 
 
 		.circle {
@@ -142,11 +154,7 @@ nav{
 				opacity: 0;
 				background: red; // replace this color with the right ones using nth-child below
 			}
-			&:hover {
-				&:before {
-					opacity: 1;
-				}
-			}
+			
 		}
 
 		&:nth-child(1) {
@@ -208,22 +216,13 @@ nav{
 			text-align: center;
 			margin-top: 5px;
 		}
-		&:hover{
-			p{
-				opacity: 1;
-			}
-		}	
 	}
 	@media screen and (max-width: $tablet-and-below){
-		// position: unset;
-		// transform: translateX(0);
-		// width: 100%;
-		// top: unset;
-		// left: unset;
-		// margin: 40px auto;
+		position: unset;
+		margin-top: 20px;
+
 	}
 	@media screen and (min-width: 768px){
-		// margin: 0px auto;
 	}
 	
 	

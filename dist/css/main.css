@@ -774,8 +774,7 @@ table {
 		display: flex;
 		justify-content: center;
 		flex-direction: row;
-		margin-bottom: 30px;
-		margin-left: 26px;
+		text-align: center;
 	}
 	.column-3 p {
 		margin-top: 50px;
@@ -797,24 +796,15 @@ table {
 
 @media screen and (max-width: 1023px) {
 	.facts .fact {
-		font-size: 19px;
-		white-space: normal;
-		margin: 26px 0;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		width: 100%;
-		min-width: 253px;
-		max-width: 301px;
+		font-size: 16px;
 	}
 }
 
 @media screen and (max-width: 1023px) {
 	.facts {
 		border: none;
-		margin: 0;
+		margin-bottom: 30px;
 		padding: 0 0;
-		margin: 0 20px;
 	}
 }
 
@@ -837,6 +827,12 @@ table {
 h6 {
 	font-weight: 500;
 	font-size: 2rem;
+}
+
+@media screen and (max-width: 1023px) {
+	h6 {
+		margin-top: 60px;
+	}
 }
 
 /* 1. Main Layout ================================= */
@@ -887,16 +883,26 @@ nav {
 	justify-content: center;
 }
 
-nav div {
+nav a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
 	flex: 1;
 	flex-wrap: wrap;
+	text-decoration: none;
+	color: #fff;
 }
 
-nav div .circle {
+nav a:hover .circle:before {
+	opacity: 1;
+}
+
+nav a:hover p {
+	opacity: 1;
+}
+
+nav a .circle {
 	display: block;
 	width: 20px;
 	height: 20px;
@@ -905,7 +911,7 @@ nav div .circle {
 	overflow: hidden;
 }
 
-nav div .circle:before {
+nav a .circle:before {
 	content: " ";
 	display: block;
 	width: 100%;
@@ -914,46 +920,45 @@ nav div .circle:before {
 	background: red;
 }
 
-nav div .circle:hover:before {
-	opacity: 1;
-}
-
-nav div:nth-child(1) .circle:before {
+nav a:nth-child(1) .circle:before {
 	background: #fff;
 }
 
-nav div:nth-child(2) .circle:before {
+nav a:nth-child(2) .circle:before {
 	background: #4b365a;
 }
 
-nav div:nth-child(3) .circle:before {
+nav a:nth-child(3) .circle:before {
 	background: #d77008;
 }
 
-nav div:nth-child(4) .circle:before {
+nav a:nth-child(4) .circle:before {
 	background: #901b00;
 }
 
-nav div:nth-child(5) .circle:before {
+nav a:nth-child(5) .circle:before {
 	background: #256d4b;
 }
 
-nav div:nth-child(6) .circle:before {
+nav a:nth-child(6) .circle:before {
 	background: #d74b62;
 }
 
-nav div:nth-child(7) .circle:before {
+nav a:nth-child(7) .circle:before {
 	background: #444444;
 }
 
-nav div p {
+nav a p {
 	opacity: 0;
 	text-align: center;
 	margin-top: 5px;
 }
 
-nav div:hover p {
-	opacity: 1;
+@media screen and (max-width: 1023px) {
+	nav {
+		position: unset;
+		margin-top: 20px;
+	}
 }
 
 /* Transitions */
