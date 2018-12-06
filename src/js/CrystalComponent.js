@@ -4,13 +4,41 @@ var CrystalComponent = Vue.component("crystal-page", {
 
 	<section class="page" v-bind:style="{ backgroundColor: crystal.backgroundColor, backgroundImage: crystal.backgroundTexture }">
 	<nav ref="navRef">
-		<router-link to="/"><span class="nav-home circle"></span></router-link>
-		<router-link to="/amethyst"><span class="nav-a circle"></span></router-link>
-		<router-link to="/citrine"><span class="nav-c circle"></span></router-link>
-		<router-link to="/jasper"><span class="nav-j circle"></span></router-link>
-		<router-link to="/greenfluorite"><span class="nav-f circle"></span></router-link>
-		<router-link to="/rosequartz"><span class="nav-r circle"></span></router-link>
-		<router-link to="/hematite"><span class="nav-h circle"></span></router-link>
+		<div>
+		
+			<router-link to="/"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<p>home</p>
+		</div>
+		
+		<div>
+			<router-link to="/amethyst"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<p>amethyst</p>
+		</div>
+		
+		<div>
+			<router-link to="/citrine"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<p>citrine</p>
+		</div>
+		
+		<div>
+			<router-link to="/jasper"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<p>jasper</p>
+		</div>
+		
+		<div>
+			<router-link to="/greenfluorite"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)"class="circle"></span></router-link>
+			<p>green fluorite</p>
+		</div>
+		
+		<div>
+			<router-link to="/rosequartz"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<p>rose quartz</p>
+		</div>
+		
+		<div>
+			<router-link to="/hematite"><span :style="styleObject" @mouseover="updateHoverState(true)" @mouseout="updateHoverState(false)" class="circle"></span></router-link>
+			<p>hematite</p>
+		</div>
 	</nav>
 	<div ref="C1Ref" class="column-1">
 		<h1 v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.title}}</h1>
@@ -18,8 +46,8 @@ var CrystalComponent = Vue.component("crystal-page", {
 		<div class="hide-on-desktop column-3">
 			
 			<ul class="facts">
+				<h6 v-bind:style="'color: ' + crystal.homeh1Color">Benefits</h6>
 				<li class="fact" v-for="fact in crystal.facts">
-				<div class="bullet"></div>
 				{{fact}}
 				</li>
 			
@@ -45,14 +73,14 @@ var CrystalComponent = Vue.component("crystal-page", {
 		</div>
 		<div class="main">
 			<div class="numbers">
-				<img v-for="(numberImage, index) in crystal.numberImages"  v-if="index == crystalSlideshowActive" v-bind:src="numberImage" alt="number one">
+				<img class="fade-in" v-for="(numberImage, index) in crystal.numberImages"  v-if="index == crystalSlideshowActive" v-bind:src="numberImage" alt="number">
 				<div class="crystals">
-					<img class="cryImg" v-for="(crystalImage, index) in crystal.crystalImages" v-if="index == crystalSlideshowActive" v-bind:src="crystalImage" alt="crystal">
+					<img class="cryImg fade-in" v-for="(crystalImage, index) in crystal.crystalImages" v-if="index == crystalSlideshowActive" v-bind:src="crystalImage" alt="crystal">
 				</div>
 			</div>
 			
 			<ul class="dots">
-				<div v-for="(crystalImage, index) in crystal.crystalImages" v-bind:style="(index == crystalSlideshowActive)?'border: 2px solid ' + crystal.homeh1Color : '' " v-on:click="jump(index)" ></div>
+				<div @click="jump(index)" v-for="(crystalImage, index) in crystal.crystalImages" v-bind:style="(index == crystalSlideshowActive)?'border: 3px solid ' + crystal.homeh1Color : '' " ></div>
 			</ul>
 			<p class="price" v-bind:style="'color: ' + crystal.homeh1Color">{{crystal.price}}</p>
 		</div>
@@ -62,14 +90,8 @@ var CrystalComponent = Vue.component("crystal-page", {
 	<div @click="addItem" class="add-button hide-on-desktop" v-bind:style="'background-color: ' + crystal.backgroundColor">add</div> <!--position absolute-->
 	<div ref="C3Ref" class="column-3">
 		<p class="hide-on-desktop">{{crystal.description}}</p>
-		<div class="hide-on-mobile  bullets">
-			<div class="bullet"></div>
-			<div class="bullet"></div>
-			<div class="bullet"></div>
-			<div class="bullet"></div>
-			<div class="bullet"></div>
-		</div>
 		<ul class="hide-on-mobile facts">
+			<h6 v-bind:style="'color: ' + crystal.homeh1Color">Benefits</h6>
 			<li class="fact" v-for="fact in crystal.facts">
 				{{fact}}
 			</li>	
@@ -129,7 +151,8 @@ var CrystalComponent = Vue.component("crystal-page", {
 	data: () => {
 		return {
 			crystalSlideshowActive: 0,
-			intervalID: null
+			intervalID: null,
+			hoverState: false,
 		}
 	},
 	created: function() {
@@ -140,14 +163,31 @@ var CrystalComponent = Vue.component("crystal-page", {
 			if (this.crystalSlideshowActive > this.crystal.crystalImages.length - 1){
 				this.crystalSlideshowActive = 0;
 			}
-		}, 3000)
+		}, 5500)
 
 	},
+	computed: {
+		styleObject() {
+		  	if (this.hoverState){
+				console.log("hoveractivated");
+				return {
+					backgroundColor: this.crystal.homeh1Color,
+				};
+			}
+		}
+	},
 	methods: {
+		updateHoverState(isHover) {
+			this.hoverState = isHover;
+			
+		},
+
 	    jump(index) {
-	    	console.log("jump: ", index)
-	    	clearInterval(this.intervalID)
-	      	this.crystalSlideshowActive = index
+			console.log("jump: ", index)
+				clearInterval(this.intervalID)
+	      		this.crystalSlideshowActive = index;
+			
+	    	
 
 	    },
 	    next(amount){

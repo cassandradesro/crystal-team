@@ -93,6 +93,7 @@
 	align-items: center;
 	justify-content: space-between;
 	font-size: 20px;
+	flex-wrap: nowrap;
 	
 	h1{
 		color: $text-purple;
@@ -137,8 +138,9 @@
 		text-align: center;
 
 		h3{
+			font-weight: 500;
+
 			@media screen and (max-width: $tablet-and-below){
-				font-weight: 500;
 				font-size: 1.5rem;
 			}
 		}
@@ -155,8 +157,8 @@
 		}
 		h4{
 			color: $text-purple;
+			font-weight: 500;
 			@media screen and (max-width: $tablet-and-below){
-				font-weight: 500;
 				font-size: 1.8rem;
 			}
 
@@ -267,32 +269,32 @@
 	}
 }
 
-.bullets{
-	display: flex;
-	flex-direction: column;
-}
-.bullet{
-	width: 10px;
-	height: 10px;
-	background-color: #fff;
-	border-radius: 50%;
-	margin: 14.5px 0;
-	@media screen and (max-width: $tablet-and-below){
-		width: 4%;
-		height: 0;
-		padding-bottom: 4%;
-		margin-right: 22px;
-	}
+// .bullets{
+// 	display: flex;
+// 	flex-direction: column;
+// }
+// .bullet{
+// 	width: 10px;
+// 	height: 10px;
+// 	background-color: #fff;
+// 	border-radius: 50%;
+// 	margin: 14.5px 0;
+// 	@media screen and (max-width: $tablet-and-below){
+// 		width: 4%;
+// 		height: 0;
+// 		padding-bottom: 4%;
+// 		margin-right: 22px;
+// 	}
 
-}
+// }
 .facts{
-	border-left: 2px solid #fff;
+	// border-left: 2px solid #fff;
 	padding: 0 20px;
 	margin: -6px;
 	
 	.fact{
 		font-size: 18px;
-		margin-top: 20px;
+		margin-top: 25px;
 		white-space: nowrap;
 		@media screen and (max-width: $tablet-and-below){
 			font-size: 19px;
@@ -331,9 +333,10 @@
 	transform: rotate(135deg);	
 }
 
-
-
-
+h6{
+	font-weight: 500;
+	font-size: 2rem;
+}
 
 
 
